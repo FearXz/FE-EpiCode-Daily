@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--method indica il metodo con cui vengono passati i dati-->
+    <!--action indica cosa fa il form-->
+    <form method="GET-POST" action="#">
+        <fieldset> <!--raccoglie set di campi-->
+            <legend>Anagrafica</legend><!--legenda set di campi-->
+            <label for="username">Nome utente?</label> <!--etichetta descrizione campo per accessibilità-->
+            <input type="text" name="username" id="username">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data">
+            <br>
+            <label for="anni">Anni:</label>
+            <input type="number" id="anni" name="anni" min="0" max="99">
+            <br>
+            <label for="orario">Orario:</label>
+            <input type="time" id="orario" name="orario">
+            <br>
+            <label for="cv">Curriculum:</label>
+            <input type="file" name="cv" id="cv">
+            <br>
+            <label for="range">Range:</label>
+            <input type="range" name="range" id="range" min="0" max="100" value="50" step="5">
+            <br>
+            <label for="nascosto">Campo nascosto:</label>
+            <input type="hidden" name="nascosto" id="nascosto">
+            <br>
+            <!--altri campi : tel month week image color-->
+            <label for="autorizzo">Autorizzo dati personali</label>
+            <input type="checkbox" name="autorizzo" id="autorizzo" checked>
+            <br>
+            <label for="corso">Corso</label>
+            <input type="text" name="corso" id="corso" placeholder="EpiCoder">
+            <br>
+            <label for="utente">utente:</label>
+            <input type="text" name="utente" id="utente" required placeholder="campo obbligatorio">
+            <br>
+            <label for="premium">passa a premium:</label>
+            <input type="text" name="premium" id="premium" disabled>
+            <br>
+            <label for="punteggio">Punteggio:</label>
+            <input type="text" name="punteggio" id="punteggio" readonly value="99">
+        </fieldset>
+        <fieldset>
+            <legend>Ulteriori form</legend>
+            <textarea name="commento" id="commento" placeholder="inserisci commento" cols="20" rows="5"></textarea>
+            <br>
+            <label for="provincia">Scegli provincia</label>
+            <select name="provincia" id="provincia">
+                <optgroup>
+                    <option value="null">-</option>
+                    <option value="MI">Milano</option>
+                    <option value="VA">Varese</option>
+                    <option value="CO">Como</option>
+                </optgroup>
+                <optgroup>
+                    <option value="null">-</option>
+                    <option value="RN">Rimini</option>
+                    <option value="BO">Bologna</option>
+                    <option value="RE">Reggio Emilia</option>
+                </optgroup>
+            </select>
+            <br>
+            <label for="domanda_1">Domanda 1</label>
+            <input type="radio" name="domanda_1" id="domanda1_" value="0">A
+            <input type="radio" name="domanda_1" id="domanda1_" value="0">B
+            <input type="radio" name="domanda_1" id="domanda1_" value="1">C
+        </fieldset>
+        <button type="submit">Invia il form</button>
+        <button type="reset">Cancella i dati</button>
+        <button type="button">Fa qualcosa</button>
+        <input type="submit" value="invia i dati">
+        <input type="button" value="Bottone che fa qualcosa">
+    </form>
+</body>
+
+</html>

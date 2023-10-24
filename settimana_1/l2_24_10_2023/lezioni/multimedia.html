@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+</head>
+
+<body>
+    <audio src="audio/heartbeat.mp3" controls autoplay loop muted></audio><!--controls per i comandi-->
+
+    <!--se usi formati audio differenti-->
+    <audio controls>
+        <source src="audio/heartbeat.mp3" type="audio/mp3">
+    </audio>
+    <br>
+
+    <video src="video/video.mp4" poster="" controls width="" height=""></video>
+    <!--stessi tag di audio , poster è il thumbnail-->
+    <picture>
+        <source media="(min:width:1024px)" srcset="img/immagine_grande.jpg">
+        <source media="(min:width:768px)" srcset="img/immagine_media.jpg">
+        <img src="img/immagine_piccola.jpg" alt="Logo">
+    </picture>
+    <br>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XKHEtdqhLK8?si=r6ctis-VUFLFuHzh"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+        <br>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.976541295842!2d12.474813212391382!3d41.871851171122394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6173fb8c8ea7%3A0x1a413c9507f97391!2sEPICODE!5e0!3m2!1sit!2sit!4v1698141993395!5m2!1sit!2sit"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</body>
+
+</html>

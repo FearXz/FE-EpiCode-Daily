@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TITOLO BROWSER</title>
+        <meta charset="utf-8"> <!-- set di caratteri occidentali -->
+        <meta name="description" content="Descrizione pagina per risultati di ricerca">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- responsive di base -->
+    </head>
+
+    <body>
+        <h1>TITOLO</h1>
+        <h2>TITOLO</h2>
+        <h3>TITOLO</h3>
+        <h4>TITOLO</h4>
+        <h5>TITOLO</h5>
+        <h6>TITOLO</h6>
+
+        <p>paragrafo 1 - p va a capo (elemento di blocco)</p>
+        <p>paragrafo 2</p>
+
+        <dl><!--description list-->
+            <dt>HTML</dt><!--description term-->
+            <dd>Linguaggio di marcatura semantica</dd>
+            <dd>MEGA KEBAB</dd><!--description data-->
+            <dt>ALTRO TERM</dt>
+            <dd>ALTRA DESCRIPTION</dd>
+        </dl>
+
+        <!--tag semantici-->
+        <address>tag semantico per contenuti anagrafici</address>
+        <blockquote cite="https://it.wikipedia.org/wiki/Wiki">citazione con relativo riferimento</blockquote>
+
+        <!--caratteri speciali-->
+        <!--si apre con & si chiude con ;-->
+        <p>3 è &lt; di 4 (minore)</p>
+        <p>4 è &gt; di 3 (maggiore)</p>
+        <p>Html &amp; css (and)</p>
+        <p>&quot; (doppio apice)</p>
+        <p>&apos; (apice singolo)</p>
+        <p>A&nbsp;B&nbsp;C&nbsp;D (spazio) </p>
+        <p>&euro; (euro) &copy; (copyright) &reg; (trademark)</p>
+        <!--elementi block / vanno a capo-->
+        <p></p> <div></div>
+        <!--elementi inline / non vanno a capo-->
+        <span>testo1 inline</span>
+        <span>testo2 inline</span>
+        <!--tag b è solo grassetto-->
+        <!--tag strong grassetto semantico rilevato con più importanza dai motori di ricerca-->
+        <b>testo in grassetto con tag b grafico</b>
+        <strong>testo in grassetto con tag strong semantico</strong>
+        <!--tag i è solo corsivo-->
+        <!--tag em corsivo semantico rilevato con più importanza dai motori di ricerca-->
+        <i>corsivo grafico</i>
+        <em>corsivo semantico</em>
+        <!--altri tag-->
+        <abbr title="hyper text markup language"> tag abbreviazione HTML</abbr>
+        <code>tag per codice = < &lt; - >&gt; </code>
+        <mark>testo markato</mark>
+        <q>tag per citazioni</q>
+        <blockquote> citazione elemento blocco</blockquote>
+        <cite>citazione elemento inline</cite>
+        <pre>testo non formattato</pre>
+        <kbd>input tastiera</kbd>
+        <samp>output software</samp>
+        <hr> tag linea orizzonatale - senza chiusura
+        <br> a capo
+        <sub>apici</sub>
+        <asub>pendici</asub>
+        <var>variabili per javascript</var>
+        <!--img è il tag-->
+        <!--src è l'attributo necessario con percorso relativo-->
+        <!--alt è l'attributo alternativo per accessibilità e posizionamento -->
+        <figure> <!-- figure racchiude img e didscalia-->
+            <img src="img/html_logo.png" alt="logo" width="25%" height="25%">
+            <!-- width di solito non si usa  // meglio avere img di dimensione esatta per responsive-->
+            <figcaption>didascalia</figcaption>
+        </figure>
+
+
+    </body>
+</html>
