@@ -90,6 +90,9 @@ div h3 {
 hr {
     border: 1px solid lightblue;
 }
+ol p{
+    margin: 0;
+}
 
 .more {
     text-align: left;
