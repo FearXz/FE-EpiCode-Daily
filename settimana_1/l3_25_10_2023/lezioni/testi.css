@@ -1,0 +1,40 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 20px;
+}
+
+/*pixel*/
+p {
+    font-size: 1em;
+}
+
+/*in proporzione al parent*/
+p {
+    font-size: 1.1rem;
+}
+
+/*proporzionale alla root body*/
+div {
+    width: 50vw;
+    margin-left: 20%;
+}
+
+/*vh=viewport eight 
+ vw=viewport width 
+
+ p {font-size: 90%}
+ p {font-size: 0.9em}
+ p {font-size: 0.9rem}
+ p {font-size: 0.9vw}
+*/
+div p {
+    color: blue;
+    text-shadow: 5px 5px 5px black;
+}
+
+article p {
+    color: #ff0000;
+}

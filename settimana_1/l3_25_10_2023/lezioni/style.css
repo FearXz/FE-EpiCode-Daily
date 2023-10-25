@@ -1,0 +1,35 @@
+/*foglio di stile css*/
+/*
+ordine priorità css
+1) dichiarazione inline
+2) style incoporato
+3) foglio di stile esterno
+4) l'ultima che legge sovrascrive la precedente
+*/
+* {
+    font: italic;
+}
+
+p {
+    font-size: 20px;
+}
+
+ul,
+ol {
+    margin-left: 30px;
+
+}
+
+p strong {
+    font-size: 22px;
+}
+
+#titolo_p {
+    color: green;
+    line-height: 40px;
+    font-size: 32px;
+}
+
+.autore {
+    color: orange;
+}
