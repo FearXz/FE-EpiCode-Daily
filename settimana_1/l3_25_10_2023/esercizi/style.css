@@ -1,0 +1,96 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    text-align: center;
+    margin: 0 auto;
+}
+
+main {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+div {
+    max-width: 100%;
+}
+
+.logo {
+    width: 150px;
+    padding: 5px;
+}
+
+.main_media {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.header_title {
+    background-color: beige;
+    border-top: 2px solid orange;
+    margin: 0;
+    padding: auto;
+    font-size: 10px;
+
+}
+
+header div {
+    padding: 2px;
+}
+
+header p {
+    color: darkcyan;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+figure{
+    margin: 0;
+}
+figcaption {
+    font-size: 12px;
+    color: gray;
+}
+
+aside p {
+    text-align: left;
+    font-size: 12px;
+    border-left: 2px solid orange;
+    padding: 0 0 0 10px;
+}
+
+a {
+    color: darkcyan;
+}
+
+aside b {
+    color: orange;
+}
+
+main h2 {
+    text-align: left;
+}
+
+ul,
+li {
+    text-align: left;
+}
+
+li {
+    line-height: 30px;
+}
+
+div h3 {
+    text-align: left;
+}
+
+hr {
+    border: 1px solid lightblue;
+}
+
+.more {
+    text-align: left;
+}
