@@ -18,3 +18,27 @@ input[type=radio]:checked {
     margin-left: 50px;
 
 }
+
+input[type=number]:in-range {
+    background-color: green;
+
+}
+
+input[type=number]:out-of-range {
+    background-color: red;
+
+}
+
+input:required {
+    border-color: red;
+}
+
+input[type=email]:valid {
+    background-color: green;
+
+}
+
+input[type=email]:invalid {
+    background-color: red;
+
+}
