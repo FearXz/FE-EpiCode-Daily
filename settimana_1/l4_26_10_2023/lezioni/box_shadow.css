@@ -1,4 +1,4 @@
-#ombra1 {
+#ombra1, .img_shadow_1{
     width: 200px;
     height: 50px;
     margin: 30px;
@@ -10,3 +10,15 @@
     box-shadow: 5px 10px 20px black;
 }
 /*box shadow : orizzontale verticale sfocatura*/
+.img_shadow_1 {
+    background-image: url(img/img.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+img{
+    width: 300px;
+    opacity: 50%;
+}
+img:hover {
+    opacity: 100%;
+}
