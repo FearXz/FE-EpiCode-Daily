@@ -1,0 +1,209 @@
+/* IMPOSTAZIONI GENERALI */
+
+body {
+    background-image: url(../img/sfondo.png);
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Prata', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+header,
+main,
+footer {
+    width: 90%;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: -2px 2px 5px black;
+    font-size: 17px;
+}
+
+header div {
+    margin: 30px auto;
+}
+
+p {
+    padding: 20px 10px;
+    line-height: 20px;
+}
+
+
+/* HEADER */
+header{
+    text-align: center;
+    background: linear-gradient(180deg, rgba(11, 76, 111, 1) 0%, rgba(9, 81, 121, 1) 39%, rgba(0, 212, 255, 1) 100%);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+header ul li {
+    line-height: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    max-width: 70%;
+    margin-top: 30px;
+}
+
+.menu {
+    padding-bottom: 20px;
+}
+
+/* MAIN */
+
+main {
+    text-align: left;
+}
+
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+main h2 {
+    font-weight: bold;
+    line-height: 1.2;
+    font-size: 30px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.data {
+    font-size: 15px;
+    color: rgb(127, 127, 127);
+}
+
+b {
+    color: purple;
+    font-weight: bold;
+}
+
+main ul li {
+    list-style-type: disc;
+    margin: 30px;
+}
+
+span {
+    background-color: lightgray;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+main ol li {
+    list-style-type: decimal;
+    margin: 30px;
+}
+
+h4 {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
+video{
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+.news {
+    width: 90%;
+    margin: 0 auto;
+    background-color: lightgray;
+
+}
+
+/* TABELLE */
+table {
+    margin: auto;
+    text-align: center;
+    border: 1px solid white;
+}
+thead,tfoot {
+    background-color: lightblue;
+    color: white;
+}
+td {
+    padding: 20px;
+}
+tfoot td{
+    padding: 1px;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* FORM */
+form {
+    padding: 20px;
+}
+input[type=email]{
+    border: 0;
+    border-bottom: 1px dashed black;
+    
+}
+input[type=submit]{
+    border: 0;
+    background-color: blue;
+    color: white;
+    
+}
+
+/* ELEMENTI NELL' ASIDE */
+article{
+    width: 90%;
+    margin: 20px auto;
+    background-color: lightgray;
+    margin: 20px auto;
+    border: 1px solid gray;
+
+}
+h3{
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.data_post
+{
+    text-align: right;
+}
+aside{
+    padding-bottom: 30px;
+}
+aside a{
+    color: darkcyan;
+    font-weight: bold;
+}
+aside p{
+    padding: 10px 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: linear-gradient(180deg, rgba(11, 76, 111, 1) 0%, rgba(9, 81, 121, 1) 39%, rgba(0, 212, 255, 1) 100%);
+
+    font-size: 20px;
+    color: white;
+
+}
+address{
+    font-weight: bold;
+}
+footer h5{
+    padding: 10px;
+
+}
+footer p{
+    padding: 10px;}
+footer a{
+    color: purple;
+    }
