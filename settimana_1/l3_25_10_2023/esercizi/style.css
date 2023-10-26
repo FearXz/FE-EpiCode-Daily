@@ -44,9 +44,11 @@ header p {
     margin-bottom: 10px;
     font-size: 10px;
 }
-figure{
+
+figure {
     margin: 0;
 }
+
 figcaption {
     font-size: 12px;
     color: gray;
@@ -87,7 +89,8 @@ div h3 {
 hr {
     border: 1px solid lightblue;
 }
-ol p{
+
+ol p {
     margin: 0;
 }
 
