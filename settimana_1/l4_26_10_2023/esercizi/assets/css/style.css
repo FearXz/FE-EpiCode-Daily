@@ -119,6 +119,10 @@ video {
     background-color: lightgray;
 
 }
+a {
+    color: darkcyan;
+
+}
 
 /* TABELLE */
 table {
