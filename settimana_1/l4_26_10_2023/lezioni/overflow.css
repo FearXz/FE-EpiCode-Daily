@@ -1,0 +1,33 @@
+div.ex1,div.ex2,div.ex3,div.ex4 {
+    background-color: chartreuse;
+    width: 150px;
+    height: 150px;
+}
+div.ex1 {
+    overflow: scroll;
+}
+div.ex2 {
+    overflow: hidden;
+}
+div.ex3 {
+    overflow: auto;
+}
+div.ex4 {
+    overflow: visible;
+}
+p {
+    border: 1px solid black;
+    width: 120px;
+}
+.uno {
+    word-break: normal; /*contenuto eccede contenitore*/
+}
+.due {
+    word-break: keep-all; /*a capo con i trattini*/
+}
+.tre {
+    word-break: break-all; /*a capo sempre*/
+}
+.quattro {
+    word-wrap: break-word;
+}
