@@ -9,7 +9,7 @@ hr {
 
 body {
     color: #393d41;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.65;
@@ -53,7 +53,7 @@ button {
     border-radius: 3px;
     border: 0;
     padding: 10px 20px;
-    margin: 50px;
+    margin: 30px;
 }
 /*
 main img {
@@ -65,10 +65,11 @@ main img {
 #banner {
     background-image: url(../images/banner.jpg);
     background-size: cover;
+    background-position: center;
 }
 #banner div {
     max-width: 745px;
-    padding: 50px;
+    padding: 130px 50px 130px 50px;
     margin: 0 auto;
 }
 
@@ -144,7 +145,7 @@ footer {
     color: #c8e7f0;
 }
 footer div{
-    width: 250px;
+    width: 300px;
     margin: 0 auto;
     text-align: left;
 }
