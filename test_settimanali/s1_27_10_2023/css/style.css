@@ -1,0 +1,104 @@
+/* Your styles here */
+* {
+    box-sizing: border-box;
+}
+hr {
+    width:50%;
+    border: 1px solid #c8e7f0;
+
+
+}
+
+body {
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.65;
+    text-align: center;
+}
+
+header {
+    background-color: black;
+}
+
+p {
+    padding: 10px 30px 10px 30px;
+}
+.italic {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 15px;
+}
+h1,h2 {
+    font-size: 2.5rem;
+    line-height: 1;  
+}
+span {
+    font-size: 0.8rem;
+}
+figure {
+    margin: 20px;
+    border: 1px solid #dee1e3;
+}
+button {
+    background-color: #f04c2f;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 0;
+    padding: 10px 20px;
+    margin: 50px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#banner {
+    background-image: url(../images/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+#logo {
+    width: 150px;
+    padding: 40px 0px 40px 0px;
+}
+
+#testimonianze {
+    background-color: #e22d0e;
+    color: white;
+}
+#testimonianze h2 {
+    color: white;
+}
+.rounded {
+    padding: 20px;
+    border-radius: 50%;
+}
+footer {
+    background-color: #25a2c3;
+    color: #c8e7f0;
+}
+
+footer h1 {
+    color: white;
+}
+
+footer a {
+    color: #c8e7f0;
+}
+
