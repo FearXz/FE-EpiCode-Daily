@@ -67,7 +67,7 @@ main img {
     background-size: cover;
 }
 #banner div {
-    width: 50%;
+    max-width: 745px;
     padding: 50px;
     margin: 0 auto;
 }
