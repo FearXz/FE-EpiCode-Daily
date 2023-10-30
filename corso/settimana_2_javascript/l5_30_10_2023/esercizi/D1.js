@@ -29,6 +29,7 @@ Object: tipo di dato in cui si possono definire coppie di dati attributo:valore.
 
 const myName = "OMAR";
 console.log('il mio nome è:'+ myName );
+// se usavo name come variabile veniva tagliata (probabile parola chiave?)
 
 
 /* ESERCIZIO 3
