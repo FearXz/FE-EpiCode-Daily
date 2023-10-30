@@ -18,6 +18,7 @@ Undefined: una variabile vuota , dichiarata e non inizializzata.
 Null: tipo di dato vuoto che non identifica un tipo specifico di dato.
 String: stringa di testo.
 Number: valore numerico decimale o intero.
+Boolean: tipo di dato che può essere vero o falso.
 Object: tipo di dato in cui si possono definire coppie di dati attributo:valore.
 */
 
