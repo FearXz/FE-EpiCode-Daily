@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sintassi</title>
+</head>
+
+<body>
+    <h2>Strict mode</h2>
+    <p>
+        opzione di controllo codice che da regole più restrittive , esempio , impedire di creare variabili senza
+        dichiararle
+    </p>
+    <h2>Variabili</h2>
+    <p>
+        var = accessibilie in qualunque parte dello script <br>
+        let = accessibile solo in uno scope (blocco di codice {}) <br>
+        <!--const è accessibile solo nel blocco come let-->
+        const = valore costante non modificabile (si scrivono in FULLMAIUSC per convenzione)
+    </p>
+    <script>
+        "use strict"
+        // dichiaro variabile ed inizializzo variabile
+        let x = 5;
+        x = x + 1;
+        // definisco uno scope , cioè in che punto posso usare la variabile
+        // una variabile non dichiarata si crea al primo utilizzo
+        let a = 'pippo';
+        console.log('a è uguale : '+a);
+
+
+    </script>
+</body>
+
+</html>
