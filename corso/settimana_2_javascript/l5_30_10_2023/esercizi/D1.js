@@ -59,7 +59,7 @@ var x=12;
 /* SCRIVI QUI LA TUA RISPOSTA */
 // myName ="Lo Giudice";
 // Uncaught TypeError: Assignment to constant variable. at D1.js:60:6
-// name è una costante , non posso cambiare il suo contenuto con il mio cognome.
+// myName è una costante , non posso cambiare il suo contenuto con il mio cognome.
 
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
@@ -67,6 +67,7 @@ var x=12;
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log("x=12 \n4-x = "+ (4-x));
+
 
 /* ESERCIZIO 7
  Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).
@@ -79,5 +80,5 @@ var name1 = 'john';
 var name2 = 'John';
 
 (name1 == name2) ? console.log('Sono uguali') : console.log('Sono diversi');
-(name1 == name2.toLowerCase()) ? console.log('Sono uguali') : console.log('Sono diversi');
+(name1 == name2.toLowerCase()) ? console.log('Sono Uguali') : console.log('Sono Diversi');
 
