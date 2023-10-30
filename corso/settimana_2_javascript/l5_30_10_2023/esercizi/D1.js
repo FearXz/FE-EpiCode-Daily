@@ -42,7 +42,7 @@ console.log('12 + 20 = '+ (12+20));
 var num1=12;
 var num2=20;
 var ris1= num1+num2;
-console.log('il risultato di 12+20 è: '+ ris1)
+console.log('il risultato di 12+20 è: '+ ris1);
 
 /* ESERCIZIO 4
  Crea una variable di nome "x" e assegna ad essa il numero 12.
