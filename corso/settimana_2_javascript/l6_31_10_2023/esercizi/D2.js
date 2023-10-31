@@ -108,17 +108,17 @@ else{
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 //annido if
-let mm1 =20;
-let mm2 =26;
-let mm3 =36;
+let mm1 =21;
+let mm2 =20;
+let mm3 =23;
 console.log('valore 1: '+mm1);
 console.log('valore 2: '+mm2);
 console.log('valore 3: '+mm3);
 
-if(mm1>mm2 && mm1>mm3)
+if(mm1>=mm2 && mm1>=mm3)
 {
   console.log('il primo è : '+mm1);
-  if (mm2>mm3)
+  if (mm2>=mm3)
   {
     console.log('il secondo è : '+mm2);
     console.log('il terzo è : '+mm3);
@@ -128,10 +128,10 @@ if(mm1>mm2 && mm1>mm3)
     console.log('il terzo è : '+mm2);
   }
 }
-else if(mm2>mm1 && mm2>mm3)
+else if(mm2>=mm1 && mm2>=mm3)
 {
   console.log('il primo è : '+mm2);
-  if (mm1>mm3)
+  if (mm1>=mm3)
   {
     console.log('il secondo è : '+mm1);
     console.log('il terzo è : '+mm3);
@@ -141,10 +141,10 @@ else if(mm2>mm1 && mm2>mm3)
     console.log('il terzo è : '+mm1);
   }
 }
-else if(mm3>mm1 && mm3>mm2)
+else if(mm3>=mm1 && mm3>=mm2)
 {
   console.log('il primo è : '+mm3);
-  if (mm2>mm1)
+  if (mm2>=mm1)
   {
     console.log('il secondo è : '+mm2);
     console.log('il terzo è : '+mm1);
