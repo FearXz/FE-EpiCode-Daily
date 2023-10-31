@@ -111,6 +111,9 @@ else{
 let mm1 =20;
 let mm2 =26;
 let mm3 =36;
+console.log('valore 1: '+mm1);
+console.log('valore 2: '+mm2);
+console.log('valore 3: '+mm3);
 
 if(mm1>mm2 && mm1>mm3)
 {
