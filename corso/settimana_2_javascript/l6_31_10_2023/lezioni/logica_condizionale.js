@@ -28,3 +28,13 @@ else{
     console.log(x+' è dispari');
     document.getElementById('test2').innerHTML=x+' è dispari';
 }
+
+// accenno ai costruttori
+
+var saluto = new Date();
+var orario = saluto.getHours();
+
+if ((orario > 6) && (orario <= 18)) {
+    document.write('Buon giorno!');
+}
+
