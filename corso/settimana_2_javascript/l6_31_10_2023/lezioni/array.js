@@ -29,3 +29,6 @@ let length = studenti.length;
 document.getElementById("demo").innerHTML = length;
 // chiedo al dom (documenti di fornirmi elemento che ha id demo)
 // col metodo .innerHTML stampa dentro id="demo" la variabile lenght
+
+studenti.push('Omar','Alvise'); // aggiunge nuovo elemento in coda all'array
+document.getElementById("demo2").innerHTML = studenti;
