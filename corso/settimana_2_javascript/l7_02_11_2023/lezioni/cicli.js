@@ -45,3 +45,5 @@ for (let i = 0; i < studentsData.length; i++) {
     }
 
 }
+
+studentsData.forEach((x) => { x.forEach(y => {console.log(y)})});
