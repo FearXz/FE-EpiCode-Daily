@@ -22,8 +22,12 @@ while (n <= 10) {
 document.getElementById('demo').innerHTML=text;
 */
 
-var utenti = ['mario','peppe','aldo','giovanni','giacomo'];
+var utenti1 = ['mario','peppe','aldo','giovanni','giacomo'];
+var utenti2 = ['mario2','peppe2','aldo2','giovanni2','giacomo2'];
 
-for (i=0; utenti.length;i++) {
-    console.log(utenti[i]);
+for (i=0; i<utenti1.length;i++) {
+    console.log(utenti1[i]);
+}
+for (elemento in utenti2) {
+    console.log(utenti2[elemento]);
 }
