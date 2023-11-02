@@ -232,14 +232,13 @@ for (let x = 0; x < female.length; x++) {
       male.splice(y, 1,);
     }
   }
-
 }
 console.log(male);
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
-random = Math.floor(Math.random() * starWarsCharacters.length);
+var random = Math.floor(Math.random() * starWarsCharacters.length);
 if (starWarsCharacters[random].gender == 'male' || starWarsCharacters[random].gender == 'robot') {
   console.log(
     starWarsCharacters[random].name + ' è nato il : ' + starWarsCharacters[random].birth_year + ' è alto : ' + starWarsCharacters[random].height + ' e pesa: ' + starWarsCharacters[random].mass + '\n' + 'la sua carnagione è: ' + starWarsCharacters[random].skin_color + ' ed i suoi occhi sono : ' + starWarsCharacters[random].eye_color
