@@ -1,4 +1,4 @@
-
+/*
 while (i < 10) {
     console.log(i);
     i++;
@@ -20,3 +20,10 @@ while (n <= 10) {
     text+= '<br> <br>'
 }
 document.getElementById('demo').innerHTML=text;
+*/
+
+var utenti = ['mario','peppe','aldo','giovanni','giacomo'];
+
+for (i=0; utenti.length;i++) {
+    console.log(utenti[i]);
+}
