@@ -95,8 +95,10 @@ body {
     padding: 0 2rem;
 }
 
-.inline_block {
-    display: inline-block;
+.flex {
+
+    display: flex;
+    justify-content: space-around;
 }
 
 a {
