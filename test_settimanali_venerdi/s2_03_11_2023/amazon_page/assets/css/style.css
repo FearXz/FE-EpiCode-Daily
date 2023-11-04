@@ -18,7 +18,7 @@ span a {
 }
 
 /* ikea's Bootstrap */
-.fs-20 {
+.fs-120 {
     font-size: 1.2rem;
 }
 
@@ -62,13 +62,7 @@ span a {
     text-align: left;
 }
 
-.main-format {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 3rem;
-    min-width: 1500px;
 
-}
 
 .mb-3 {
 
@@ -144,6 +138,14 @@ ul li {
     height: 250px;
     background-image: url(../images/bg-image.png);
     background-size: 100%;
+}
+
+.main-format {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    min-width: 1500px;
+
 }
 
 .img_format {
