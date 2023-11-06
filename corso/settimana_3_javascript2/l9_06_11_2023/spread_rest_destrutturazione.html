@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecmascript</title>
+</head>
+
+<body>
+    <h2>
+        Ecmascript 6
+    </h2>
+
+    <script>
+        // OPERATORE SPREAD
+        /*
+        L'operatore spread condivide con i parametri rest la sintassi: i tre puntini ... <br>
+        possiamo espandere un arrayo o un oggetto e renderli disponibile in ambiti diversi
+        passandoli come parametri ad una funzione
+        */
+
+        function mia_funzione(a, b, c) {
+            console.log(a, b, c);
+        }
+        let valori = ['ecco', 'operatore', 'spread'];
+        mia_funzione(...valori); // ecco operatore spread
+
+        var listaa = [0, 1, 2];
+        var listab = [3, 4, 5];
+        var listac = [...listaa, ...listab];
+        console.log(listac);
+        // con operatore spread gli array non  vengono collegati ma viene fatta una copia superficiale
+        let originale = [0, 1, 2];
+        let copiaRiferimento = originale; // se modifichi questo, cambia anche originale
+        let copiaValori = [...originale]; // se modifichi questo , non cambia originale
+        originale.push(3);
+        console.log(copiaRiferimento);
+        console.log(copiaValori);
+
+        //3
+        let utenteBase = {
+            nome: "",
+            password: "",
+        };
+        let amministratore = {
+            ...utenteBase,
+            permessi: [],
+        };
+
+        //4
+
+        function sum(x, y, z, k) {
+            return x + y + z + k;
+        }
+        const numbers = [1, 2, 3, 4];
+        console.log(sum(...numbers));
+
+        // PARAMETRO REST
+        /* con il parametro rest raccogliamo un numero indefinito di parametri in un array e passiamo tutti i valori da un
+       array ad un altro */
+        function somma(...array) {
+            let total = 0;
+            for (const elemento of array) {
+                total += elemento;
+            }
+            return total;
+        }
+        console.log(somma(1, 2, 3));
+        console.log(somma(1, 2, 3, 4));
+        console.log(somma(1, 2, 3, 4, 5));
+        console.log(somma(1, 2, 3, 4, 5, 6));
+
+        // ASSEGNAZIONE DI DESTRUTTURAZIONE
+        // serve a  spezzare o spacchettare  array o oggetti
+        let arr = ['pippo', 'pluto'];
+        let [firstName, surname] = arr; // li imposta rispettivamente su indici [0] e [1]
+        console.log(firstName + ' ' + surname); // abbiamo copiato il contenuto dell'array dentro 2 variabili
+
+        let [nome, , titolo] = ['pippo', 'pluto', 'trafficante di coca'];
+        console.log(nome, titolo);
+
+        // esempio REST
+
+        var names = ['asd1', 'asd2', 'asd3', 'asd4'];
+        let [x, y, ...restof] = [10, 20, 30, 40, 50];
+        console.log(x);
+        console.log(y);
+        console.log(restof);
+
+        ({ a, b, ...restof }= {a:10,b:20,m:30,n:40});
+        console.log(a);
+        console.log(b);
+        console.log(restof);
+
+        //template literal `` backtip
+        // stringa con diversa formattazione (non serve \n)
+        var messaggio = `ciao sono un kebabbaro ${a}
+        e mi piace fare 
+        il kebab ${b}`;
+        console.log(messaggio);
+
+    </script>
+
+
+</body>
+
+</html>

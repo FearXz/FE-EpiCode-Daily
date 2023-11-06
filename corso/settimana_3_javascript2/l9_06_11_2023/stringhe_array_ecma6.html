@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stringhe ecma6</title>
+</head>
+
+<body>
+    <script>
+        /*
+        METODI STRINGHE vecchi
+        slice substring substr (per tagliare)
+        toUpperCase toLowerCase
+        */
+        /*
+        Metodi CONTROLLO STRINGHE ECMA6
+        startsWith() controlla se inizia con determinati caratteri
+        */
+        const str1 = 'Saturday night plans';
+        console.log(str1.startsWith('Sat'));
+        /*
+        endsWith() controlla se finisce con determinati caratteri
+        */
+        const str2 = 'rugby is best!';
+        console.log(str2.endsWith('est!'));
+        /*
+        includes() controlla se ce un insieme di caratteri all'interno della stringa
+        */
+        const str3 = 'il kebab è lo sport più buono del mondo!';
+        console.log(str3.includes('rt più b'));
+        const parola = 'sport';
+        console.log(`La parola ${parola} ${str3.includes(parola) ? 'è' : 'non è'} contenuta nella frase`);
+
+        /*
+        METODI ARRAY GIÀ VISTI
+        length - push - pop - shift - unshift - sort - reverse - splice - index of - concat - find
+        */
+
+        // FIND - FINDINDEX restituisce un valore che supera un test
+
+        const age = [3, 10, 18, 20, 31, 15];
+        function checkAge(age) {
+            return age > 18
+        }
+        console.log(age.find(checkAge));
+        console.log(age.findIndex(checkAge));
+
+        // SOME - controlla se almeno un elemento passa un test ritorna true false
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+        console.log(age.some(checkAdult));
+
+        // FILTER - filtra tutti gli elementi in base ad un controllo
+        function checkAdult2(age) {
+            return age >= 18;
+        }
+        console.log(age.filter(checkAdult2));
+
+        // MAP - crea un nuovo array dal risultato di una funziona assegnato ad ogni elemento
+        const number = [4,9,16,25];
+        console.log(number.map(Math.sqrt));
+
+        // FOR EACH - applica una funziona a ciascun elemento di un array
+        const numbers = [4,9,16,25];
+        numbers.forEach(myF);
+        console.log(numbers);
+        function myF(item,index,array) {
+            array[index] = item*10;
+        }
+
+        // REDUCE - riduco ad un valore in base ad un operazione
+
+        const number2=[175,50,25];
+        console.log(number2.reduce(myF2));
+        function myF2(total,num){
+            return total-num;
+        }
+
+        //REDUCERIGHT - riduce ma da destra verso sinistra il risultato sarebbe -200
+
+        // EVERY (restituisce true se sono tutti rispettano la condizione) - JOIN - SPLIT 
+
+
+
+
+    </script>
+</body>
+
+</html>
