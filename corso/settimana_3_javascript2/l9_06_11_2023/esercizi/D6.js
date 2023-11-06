@@ -36,7 +36,7 @@ console.log(checkPari(numPari));
 let numPari = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 20, 33, 55, 66, 72, 81];
 function checkPari(arrayN) {
   let arrayP = [];
-  arrayP = arrayN.filter(function (elemento) {return elemento %2==0});
+  arrayP = arrayN.filter(function (elemento) { return elemento % 2 == 0 });
   return arrayP;
 }
 console.log(checkPari(numPari));
@@ -74,7 +74,7 @@ function reduceArrayN(arrayN) {
   return risultato;
 }*/
 function reduceArrayN(arrayN) {
-  return arrayN.reduce((totalValue,singleValue) => totalValue+= singleValue);
+  return arrayN.reduce((totalValue, singleValue) => totalValue += singleValue);
 }
 
 
@@ -83,11 +83,11 @@ function reduceArrayN(arrayN) {
 */
 const numberArray = [4, 9, 16, 25];
 const n = 6;
-console.log(sommaMap(numberArray,n));
+console.log(sommaMap(numberArray, n));
 
 function sommaMap(arrayN, n) {
-  let arrayRisultato=[];
-  arrayRisultato=arrayN.map(function (singleElement){return singleElement+=n});
+  let arrayRisultato = [];
+  arrayRisultato = arrayN.map(function (singleElement) { return singleElement += n });
   return arrayRisultato;
 }
 /*
@@ -101,11 +101,16 @@ function sommaMap(arrayN, n) {
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 const stringhe = ['ciao', 'kebab', 'pistacchio', 'burro'];
+console.log(lengthMap(stringhe));
 
-console.log(stringhe.map(myF4));
-function myF4(array) {
-  return array.length;
+function lengthMap(array) {
+  return array.map(function (x) { return x.length });
 }
+/*
+function lengthMap(array) {
+  return array.map((x) =>  x.length);
+}
+*/
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
@@ -241,7 +246,7 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 const movie1 = [...movies];
-
+/* OK
 const oldmovie = (array) => {
   let result = { Year: 2100 }
   array.forEach((array) => {
@@ -251,8 +256,18 @@ const oldmovie = (array) => {
     }
   })
   return result;
+}*/
+function oldmovie(array) {
+  let result = { Year: 2100 }
+  array.forEach(function (array) {
+    if (parseInt(array.Year) < result.Year) {
+      result = array
+    }
+  })
+  return result;
 }
 console.log(oldmovie(movie1));
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
@@ -266,12 +281,10 @@ console.log(countMovie(movie2));
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 const movie3 = [...movies];
-console.log(myF6(movie3));
+console.log(mapTitle(movie3));
 
-function myF6(movie3) {
-  return movie3.map(function (movie3) {
-    return movie3.Title;
-  });
+function mapTitle(array) {
+  return array.map(function (array) { return array.Title; });
 }
 
 /* ESERCIZIO 12 (filter)
@@ -279,21 +292,25 @@ function myF6(movie3) {
 */
 const movie4 = [...movies];
 function check2000(array) {
-  return parseInt(array.Year) > 1999;
+  return array.filter(function (array) { return parseInt(array.Year) > 1999 });
 }
-console.log(movie4.filter(check2000));
+console.log(check2000(movie4));
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 const movie5 = [...movies];
-console.log(myF7(movie5));
-
-function myF7(array) {
+console.log(sumArrayString(movie5));
+/*
+function sumArrayString(array) {
   let sommaAnni = array.map(film => film.Year);
   let somma = 0;
   somma = sommaAnni.reduce((totale, num) => parseInt(totale) + parseInt(num));
   return somma;
+}*/
+function sumArrayString(array) {
+
+  return array.reduce(function (totale, valoreArray) { return totale += parseInt(valoreArray.Year) }, 0);
 }
 
 
@@ -301,12 +318,19 @@ function myF7(array) {
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 const movie6 = [...movies];
-function checkFilm(string) {
-  return array == string;
+console.log(findimdbID(movie6));
+
+function findimdbID(array) {
+  return array.filter(function (array) { return array.imdbID == 'tt2395427' });
 }
-console.log(movie6.find(checkFilm));
-console.log(movie6.findIndex(checkFilm));
+
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+const movie7 = [...movies];
+console.log(checkInYear(movie7, 2012));
+
+function checkInYear(array, anno) {
+  return array.findIndex(function (array) {return parseInt(array.Year) == anno});
+}
