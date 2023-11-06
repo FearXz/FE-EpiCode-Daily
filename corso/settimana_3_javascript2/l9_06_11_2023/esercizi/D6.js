@@ -215,10 +215,16 @@ const movies = [
 */
 const movie1 =[...movies];
 
-function myF5(movie1){
-
+const oldmovie = (array) => {
+let result= {Year:2100}
+array.forEach((array) => {
+  let currentYear = parseInt(array.Year)
+  if (currentYear < result.Year) {
+    result = array
+  }
+})
 }
-
+console.log(oldmovie);
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
