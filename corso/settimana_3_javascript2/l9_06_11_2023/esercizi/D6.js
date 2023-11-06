@@ -215,7 +215,7 @@ const movies = [
 */
 const movie1 =[...movies];
 
-function myF5(item,index,array){
+function myF5(movie1){
 
 }
 
@@ -253,12 +253,12 @@ console.log(movie4.filter(check2000));
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 const movie5 =[...movies];
-
+console.log(myF7(movie5));
 
 function myF7(array){
   let sommaAnni= array.map(film => film.Year);
-  
-    somma= sommaAnni.reduce((totale,num)=> totale+num);
+    let somma=0;
+    somma= sommaAnni.reduce((totale,num)=> parseInt(totale)+parseInt(num));
     return somma;
 }
 
