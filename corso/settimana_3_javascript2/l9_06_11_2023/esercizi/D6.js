@@ -332,5 +332,5 @@ const movie7 = [...movies];
 console.log(checkInYear(movie7, 2012));
 
 function checkInYear(array, anno) {
-  return array.findIndex(function (array) {return parseInt(array.Year) == anno});
+  return array.findIndex((array) => {return parseInt(array.Year) == anno});
 }
