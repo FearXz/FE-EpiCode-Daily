@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stile1 {
+            background-color: red;
+            color: white;
+
+        }
+
+        .stile2 {
+            background-color: black;
+            color: gray;
+
+        }
+
+        .stile3 {
+            background-color: green;
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div" class="stile1">
+        <span id="span" class="stile1"> colore del testo <b id="b">Colore</b> </span>
+    </div>
+    <button onclick="changeColor()">Cambia colore!</button>
+
+    <script>
+        function changeColor() {
+            let statusDiv = document.getElementById('div');
+            let statusSpan = document.getElementById('span');
+            let text = document.getElementById('b');
+            if (statusDiv.classList.contains('stile1')) {
+                statusDiv.setAttribute('class', 'stile2')
+                statusSpan.setAttribute('class', 'stile2')
+                text.innerHTML = 'Grigio';
+            }
+            else if (statusDiv.classList.contains('stile2')) {
+                statusDiv.setAttribute('class', 'stile3')
+                statusSpan.setAttribute('class', 'stile3')
+                text.innerHTML = 'Gold';
+            }
+            else {
+                statusDiv.setAttribute('class', 'stile1')
+                statusSpan.setAttribute('class', 'stile1')
+                text.innerHTML = 'Bianco';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
