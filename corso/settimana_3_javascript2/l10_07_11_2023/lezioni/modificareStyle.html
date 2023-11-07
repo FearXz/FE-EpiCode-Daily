@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">JS DOM MANIPULATION</h1>
+    <script>
+        let title = document.querySelector('#title');
+        title.style.color = 'yellow';
+        title.style.backgroundColor = 'black';     //camelCase fontSize borderWidth borderRadius ...
+        console.log(title);
+
+
+    </script>
+    <p>asdadadasdasdasdasdsa</p>
+    <p>asdadadasdasdasdasdsa</p>
+    <p>asdadadasdasdasdasdsa</p>
+    <p>asdadadasdasdasdasdsa</p>
+    <script>
+        // quesrySelectorAll restituisce un array lista NodeList si può usare ForEach  
+        let paragrafi = document.querySelectorAll('p');
+        paragrafi.forEach((elemento) => {
+            elemento.style.color = 'yellow';
+            elemento.style.backgroundColor = 'black';
+        })
+    </script>
+
+    <h3>Aggiungere classi</h3>
+    <p>ho bisognodi html e css con classe e js per aggiungere la classe</p>
+    <p>clicca sul bottone per aggiungere una classe</p>
+    <style>
+        .myStyle {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+    <div id="myDiv">questo è un div myDiv</div> <br>
+    <button onclick="aggiungiClasse()">Prova</button>
+    
+    <script>
+        function aggiungiClasse() {
+            var temp = document.getElementById('myDiv');
+            temp.classList.add('myStyle');
+        }
+    </script>
+    <h3>Rimuovere classi</h3>
+    <div id="myDiv2" class="myStyle">questo è un div myDiv2</div> <br>
+    <button onclick="rimuoviClasse()">Prova</button>
+    <script>
+        function rimuoviClasse() {
+            var temp = document.getElementById('myDiv2');
+            temp.classList.remove('myStyle');
+        }
+    </script>
+
+    <h3>Toggle di classi</h3> <!--aggiung e Rimuovere style--> 
+    <div id="myDiv3" class="myStyle">questo è un div myDiv3</div> <br>
+    <button onclick="toggleClasse()">Prova</button>
+    <script>
+        function toggleClasse() {
+            var temp = document.getElementById('myDiv3');
+            temp.classList.toggle('myStyle');
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

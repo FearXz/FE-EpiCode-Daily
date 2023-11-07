@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Selezionre elementi nel DOM</h2>
+    <h3>GetElementByID</h3>
+    <p>permette di selezionare un singolo elemento nel dom tramite il suo ID</p>
+    <div id="demo"></div>
+    <script>
+        document.getElementById(`demo`).innerHTML = 'HELLO WORLD';
+    </script>
+    <h3>getElementByClassName</h3>
+    <p>permette di selezionare un singolo elemento nel dom tramite la sua classe</p>
+    <div class="esempio">DIV ESEMPIO</div>
+    <div class="esempio">DIV ESEMPIO</div>
+    <div class="esempio">DIV ESEMPIO</div>
+    <p>ciao sono un <span class="esempio"> kebab</span></p>
+    <script>
+        const collection = document.getElementsByClassName('esempio'); // ritorna un array
+        collection[0].innerHTML = 'Ciao a tutti'; //qua riprendo solo il primo elemento
+        //ORA SELEZIONO TUTTE LE CLASSI ESEMPIO
+        for (let i = 0; i < collection.length; i++) {
+            collection[i].style.backgroundColor = 'red'; //nel css in js si usa camelCase e non kebab-case
+        }
+    </script>
+
+    <h3>getElemenByTagName</h3>
+    <p>ci permette di selezionare gli elementi in base al nome tag</p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+    <p id="demo2"></p>
+    <script>
+        const collection2 = document.getElementsByTagName('li');
+        // si può usare direttamente : document.getElementsByTagName('li')[1]
+        document.getElementById('demo2').innerHTML = collection2[1].innerHTML;
+        // si può usare length per contare gli elementi selezionati da getElementsByTagName
+    </script>
+    <p> creo un paragrafo <span>in cui</span> inserisco <span>alcuni</span> span per testare <span>javascript</span></p>
+    <script>
+        const collection3 = document.getElementsByTagName('span');
+        for (let i = 0; i < collection3.length; i++) {
+            collection3[i].style.backgroundColor = 'green';
+        }
+    </script>
+    <h3>query selector - query selector all</h3>
+    <p>accettano come parametro un selettore css per selezionare gli elementi</p>
+    <p>accettano come parametro un selettore css per selezionare gli elementi</p>
+    <p>accettano come parametro un selettore css per selezionare gli elementi</p>
+    <h4 id="title">Dom in js query selector</h4>
+    <script>
+        // query selector seleziona solo il primo elemento trovato
+        let title = document.querySelector('#title')
+        console.log(title); // stampa tutto il tag
+        // essendo js i selettori sono case sensitive
+        let paragrafi = document.querySelectorAll('p');
+        console.log(paragrafi);
+
+    </script>
+</body>
+
+</html>

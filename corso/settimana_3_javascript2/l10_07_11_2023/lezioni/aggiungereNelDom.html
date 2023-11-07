@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiungere elementi al dom</title>
+    <style>
+        #myDiv {
+            background-color: #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Inserire elementi nel DOM via js</h1>
+    <p>creare paragrafo p con del test</p>
+    <section>
+        <div id="myDiv">
+            <img src="" alt="">
+        </div>
+    </section>
+    <ul id="list1">
+        <li>Css</li>
+        <li>HTML</li>
+    </ul>
+    <ul id="list2">
+        <li>JS</li>
+        <li>React</li>
+    </ul>
+    <button onclick="myF1()">sposta contenuto lista</button>
+
+    <ul id="list3">
+        <li>cosa1 <b>cosa2</b></li>
+        <li>cosa2</li>
+    </ul>
+    <button onclick="myF2()">sostituisco elemento lista</button>
+    <p id="demo">paragrafo da rimuovere con bottone</p>
+    <button onclick="myF3()">uccidi paragrafo</button>
+    
+
+    <script>
+        const paragrafo = document.createElement('p');
+        paragrafo.innerHTML = 'questo è il mio nuovo <b>paragrafo</b>';
+        // lo ho creato ma non lo ho posizionato
+        document.getElementById('myDiv').appendChild(paragrafo);
+        // con apendChild lo mette in coda all'elemento selezionato dall'id myDiv
+
+        const btn = document.createElement('button');
+        btn.innerHTML = 'Bottone bello'
+        document.body.appendChild(btn);
+
+        //append child
+        function myF1() {
+            const li = document.getElementById('list2').firstElementChild;
+            document.getElementById('list1').appendChild(li);
+        }
+
+        //inserire prima e non in coda
+        // creo li , creo del testo , ed inserisco testo dentro li
+        const newNode = document.createElement('li');
+        const textNode = document.createTextNode('studiare js');
+        newNode.appendChild(textNode);
+        const list = document.getElementById('list3');
+        list.insertBefore(newNode, list.children[0]);
+
+        function myF2(){
+            const li = document.getElementById('list3').children[1];
+            const newText = document.createTextNode('vado al mare');
+            li.replaceChild(newText,li.childNodes[0]);
+        }
+        function myF3(){
+            document.getElementById('demo').remove();
+            //oppure
+            const par=document.getElementById('demo');
+            par.remove();
+            // esiste anche remove child
+        }
+        
+    </script>
+</body>
+
+</html>

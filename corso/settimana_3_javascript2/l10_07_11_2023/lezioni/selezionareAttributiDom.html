@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selezionare attributi Dom</title>
+</head>
+
+<body>
+    <h1>Selezionare emodificare attributi del DOM</h1>
+    <p> manipolare per sempio href di un link</p>
+    <table>
+        <tr>
+            <th>Metodo</th>
+            <th>Descrizione</th>
+        </tr>
+        <tr>
+            <td>hasAttribute(attrName)</td>
+            <td>Restituisce true se l'elemento ha l'attributo spcificato come parametro</td>
+        </tr>
+        <tr>
+            <td>hasAttribute()</td>
+            <td>Restituisce true se l'elemento ha almeno un elemento valorizzato</td>
+        </tr>
+        <tr>
+            <td>getAttribute(attrName)</td>
+            <td>restiruisce il valore dell'attributo specificato come parametro</td>
+        </tr>
+        <tr>
+            <td>setAttribute(attrName,value)</td>
+            <td>imposta (col secondo parametro) il nuovo valore di un attributo</td>
+        </tr>
+    </table>
+    <img src="" alt="">
+    <p>quanto uso questi metodi?</p>
+    <script>
+        // assegnaer img di default ad img che non hanno un img associata
+        var imgList = document.getElementsByTagName('img');
+        for (let i = 0; i < imgList.length; i++) {
+            if (!imgList[i].hasAttribute('src') || imgList[i].getAttribute('src') == "") {
+                imgList[i].setAttribute('src', 'default.png')
+            }// si può anche usar imgList.src=='' con la dot notation imgList.src = 'default.png';
+        }
+    </script>
+    <h3>Esempio sostituzione immagine</h3>
+    <img src="asset/1.jpg" id="myImg">
+    <p>Clicca sul bottone per cambiare immagine</p>
+    <button onclick="cambiaImg()">Prova</button>
+    <script>
+        function cambiaImg() {
+            document.getElementById('myImg').src = 'asset/2.jpg';
+        }
+    </script>
+    <h3>set attribute</h3>
+    <p>seleziono un titolo e gli setto una classe css</p>
+    <style>
+        .democlass {
+            color: red;
+        }
+    </style>
+    <h5 id="myH5">roba a caso h5 per bottone</h5>
+    <button onclick="cambiaStyle()">Cambia colore</button>
+    <script>
+        function cambiaStyle() {
+            document.getElementById('myH5').setAttribute('class', 'democlass');
+        }
+    </script>
+
+</body>
+
+</html>
