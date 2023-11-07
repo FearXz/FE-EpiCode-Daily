@@ -245,8 +245,8 @@
   */ // selectorall img .display none
 
     const hideAllImages = function () {
-      let img = document.querySelector('td img');
-          img.style.display ='none';
+      let img = document.querySelectorAll('img');
+          img.forEach((img)=>{img.style.display ='none';})
      }
      hideAllImages();
 
