@@ -74,7 +74,7 @@
     </h2>
   </div>
 
-  <div id="tableArea"></div>
+  <div id="tableArea" onclick="hideAllImages()"></div>
 
   <footer onclick="revealFooterLink()">
     <h3>
@@ -198,47 +198,65 @@
     const generateTable = function () {
       const area = document.getElementById('tableArea');
       const table = document.createElement("table")
-      const newRow = document.createElement("tr")
-      const tdImage = document.createElement("td")
-      tdImage.innerHTML = '<img src="asset/1.jpg" alt="smartphone" height="200"/>'
-      const tdProduct = document.createElement("td")
-      tdProduct.innerText = "Smartphone"
-      const tdQuantity = document.createElement("td")
-      tdQuantity.innerText = '20'
-      const tdPrice = document.createElement("td")
-      tdPrice.innerText = '50€'
-
-      newRow.appendChild(tdImage)
-      newRow.appendChild(tdProduct)
-      newRow.appendChild(tdQuantity)
-      newRow.appendChild(tdPrice)
+      const newRow = document.createElement("tr");
+      const thImage = document.createElement('th');
+      const thProduct = document.createElement('th');
+      const thQuantity = document.createElement('th');
+      const thPrice = document.createElement('th');
+      table.setAttribute('width', '100%')
+      thImage.innerHTML = 'Immagini';
+      thProduct.innerHTML = 'Prodotto';
+      thQuantity.innerHTML = 'Quantità';
+      thPrice.innerHTML = 'Prezzo';
+      newRow.appendChild(thImage)
+      newRow.appendChild(thProduct)
+      newRow.appendChild(thQuantity)
+      newRow.appendChild(thPrice)
       table.appendChild(newRow)
       area.appendChild(table)
 
+      for (let i = 0; i < 5; i++) {
+        const newRow = document.createElement("tr");
+        const tdImage = document.createElement('td');
+        const tdProduct = document.createElement('td');
+        const tdQuantity = document.createElement('td');
+        const tdPrice = document.createElement('td');
+        tdImage.innerHTML = '<img src="asset/1.jpg" alt="smartphone" height="200"/>';
+        tdProduct.innerHTML = 'Prodotto : ' + i;
+        tdQuantity.innerHTML = Math.floor(Math.random() * 101);
+        tdPrice.innerHTML = Math.floor(Math.random() * 1000) + '€';
+        newRow.appendChild(tdImage)
+        newRow.appendChild(tdProduct)
+        newRow.appendChild(tdQuantity)
+        newRow.appendChild(tdPrice)
+        table.appendChild(newRow)
+      }
     }
     generateTable();
     /* ESERCIZIO 12
      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
   */
 
-    const addRow = function () {
+    const addRow = function (url, product, quantity, price) {
+      let image = '<img src="' + url + '" alt="smartphone" height="200"/>';
+
       const table = document.querySelector("table");
       const newRow = document.createElement("tr");
       const tdImage = document.createElement("td")
-      tdImage.innerHTML = '<img src="asset/1.jpg" alt="smartphone" height="200"/>'
+      tdImage.innerHTML = image;
       const tdProduct = document.createElement("td")
-      tdProduct.innerText = "Smartphone"
+      tdProduct.innerText = product;
       const tdQuantity = document.createElement("td")
-      tdQuantity.innerText = '20'
+      tdQuantity.innerText = quantity;
       const tdPrice = document.createElement("td")
-      tdPrice.innerText = '50€'
+      tdPrice.innerText = price + '€';
       newRow.appendChild(tdImage)
       newRow.appendChild(tdProduct)
       newRow.appendChild(tdQuantity)
       newRow.appendChild(tdPrice)
       table.appendChild(newRow)
     }
-    addRow();
+    addRow('asset/1.jpg', 'Smartphone', 20, 500);
 
     /* ESERCIZIO 14
     Crea una funzione che nasconda le immagini della tabella quando eseguita
@@ -246,9 +264,9 @@
 
     const hideAllImages = function () {
       let img = document.querySelectorAll('img');
-          img.forEach((img)=>{img.style.display ='none';})
-     }
-     hideAllImages();
+      img.forEach((img) => { img.style.display = 'none'; })
+    }
+
 
     /* EXTRA ESERCIZIO 15
     Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
@@ -267,7 +285,12 @@
     Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
   */// seleziona tutti i tag e con un tag  tolgo (!== elenco vocali)
 
-    const deleteVowels = function () { }
+    const deleteVowels = function () {
+      document.querySelectorAll("h1,h2,h3,p,a,li,th,td").forEach((tag) => tag.innerText = [...tag.innerText].filter((caratteri) => { return caratteri != 'a' && caratteri != 'e' && caratteri != 'i' && caratteri != 'o' && caratteri != 'u' }).join(''))
+
+    }
+
+    deleteVowels();
   </script>
 </body>
 
