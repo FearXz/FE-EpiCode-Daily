@@ -197,41 +197,61 @@
   */// createElement poi popolo
 
     const generateTable = function () {
-        const area =document.getElementById('tableArea');
-        const table = document.createElement("table")
-        const newRow = document.createElement("tr")
-        const tdImage = document.createElement("td")
-        tdImage.innerHTML = '<img src="asset/1.jpg" alt="smartphone" height="200"/>'
-        const tdProduct = document.createElement("td")
-        tdProduct.innerText = "Smartphone"
-        const tdQuantity = document.createElement("td")
-        tdQuantity.innerText = '20'
-        const tdPrice = document.createElement("td")
-        tdPrice.innerText = '50€'
+      const area = document.getElementById('tableArea');
+      const table = document.createElement("table")
+      const newRow = document.createElement("tr")
+      const tdImage = document.createElement("td")
+      tdImage.innerHTML = '<img src="asset/1.jpg" alt="smartphone" height="200"/>'
+      const tdProduct = document.createElement("td")
+      tdProduct.innerText = "Smartphone"
+      const tdQuantity = document.createElement("td")
+      tdQuantity.innerText = '20'
+      const tdPrice = document.createElement("td")
+      tdPrice.innerText = '50€'
 
-        newRow.appendChild(tdImage)
-        newRow.appendChild(tdProduct)
-        newRow.appendChild(tdQuantity)
-        newRow.appendChild(tdPrice)
-        table.appendChild(newRow)
-        area.appendChild(table)
+      newRow.appendChild(tdImage)
+      newRow.appendChild(tdProduct)
+      newRow.appendChild(tdQuantity)
+      newRow.appendChild(tdPrice)
+      table.appendChild(newRow)
+      area.appendChild(table)
 
     }
     generateTable();
     /* ESERCIZIO 12
      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
   */
+/*
+    const addRow = function () {
+      const table = document.getElementsByTagName('table');
+      const newRow = document.createElement("tr");
+      const tdImage = document.createElement("td")
+      tdImage.innerHTML = '<img src="asset/1.jpg" alt="smartphone" height="200"/>'
+      const tdProduct = document.createElement("td")
+      tdProduct.innerText = "Smartphone"
+      const tdQuantity = document.createElement("td")
+      tdQuantity.innerText = '20'
+      const tdPrice = document.createElement("td")
+      tdPrice.innerText = '50€'
+      newRow.appendChild(tdImage)
+      newRow.appendChild(tdProduct)
+      newRow.appendChild(tdQuantity)
+      newRow.appendChild(tdPrice)
+      table.appendChild(newRow)
 
-    const addRow = function () { 
-      
+
     }
     addRow();
-
+*/
     /* ESERCIZIO 14
     Crea una funzione che nasconda le immagini della tabella quando eseguita
   */ // selectorall img .display none
 
-    const hideAllImages = function () { }
+    const hideAllImages = function () {
+      let img = document.querySelector('td img');
+          img.style.display ='none';
+     }
+     hideAllImages();
 
     /* EXTRA ESERCIZIO 15
     Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
