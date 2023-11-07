@@ -197,26 +197,35 @@
   */// createElement poi popolo
 
     const generateTable = function () {
-      let area = document.getElementById('tableArea')
-      let newT = document.createElement('table');
-      area.appendChild(newT);
-      let newTr = [];
-      let newTd = [];
-      for (let x = 0; x < 2; x++) {
-        newTr[x] = document.createElement('tr');
-        newT.appendChild(newTr[x]);
-        for (let y = 0; y < 5; y++) {
-          newTd[y] = document.createElement('td');
-          newTr[x].appendChild(newTd[y]);
-        }
-      }
+        const area =document.getElementById('tableArea');
+        const table = document.createElement("table")
+        const newRow = document.createElement("tr")
+        const tdImage = document.createElement("td")
+        tdImage.innerHTML = '<img src="asset/1.jpg" alt="smartphone" height="200"/>'
+        const tdProduct = document.createElement("td")
+        tdProduct.innerText = "Smartphone"
+        const tdQuantity = document.createElement("td")
+        tdQuantity.innerText = '20'
+        const tdPrice = document.createElement("td")
+        tdPrice.innerText = '50€'
+
+        newRow.appendChild(tdImage)
+        newRow.appendChild(tdProduct)
+        newRow.appendChild(tdQuantity)
+        newRow.appendChild(tdPrice)
+        table.appendChild(newRow)
+        area.appendChild(table)
+
     }
     generateTable();
     /* ESERCIZIO 12
      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
   */
 
-    const addRow = function () { }
+    const addRow = function () { 
+      
+    }
+    addRow();
 
     /* ESERCIZIO 14
     Crea una funzione che nasconda le immagini della tabella quando eseguita
@@ -233,8 +242,8 @@
       let red = Math.floor(Math.random() * 256);
       let green = Math.floor(Math.random() * 256);
       let blue = Math.floor(Math.random() * 256);
-      let randomColor='rgb('+red+','+green+','+blue+')';
-      h2.style.color= randomColor;
+      let randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+      h2.style.color = randomColor;
     }
 
     /* EXTRA ESERCIZIO 16
