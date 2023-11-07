@@ -284,12 +284,20 @@
     /* EXTRA ESERCIZIO 16
     Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
   */// seleziona tutti i tag e con un tag  tolgo (!== elenco vocali)
-
+    /*
     const deleteVowels = function () {
       document.querySelectorAll("h1,h2,h3,p,a,li,th,td").forEach((tag) => tag.innerText = [...tag.innerText].filter((caratteri) => { return caratteri != 'a' && caratteri != 'e' && caratteri != 'i' && caratteri != 'o' && caratteri != 'u' }).join(''))
 
     }
 
+    deleteVowels();*/
+    deleteVowels = function () {
+      const allTag = document.querySelectorAll("h1, h2, p, span, b, p, a, li, th");
+      allTag.forEach(tag => {
+        tag.innerText = tag.textContent.replace(/[aeiou]/gi, '');
+        
+      })
+    }
     deleteVowels();
   </script>
 </body>
