@@ -188,7 +188,6 @@
     const revealFooterLink = function () {
       let url = document.querySelector('footer a').href;
       alert('URL : ' + url);
-
     }
 
     /* ESERCIZIO 11
@@ -221,9 +220,9 @@
     /* ESERCIZIO 12
      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
   */
-/*
+
     const addRow = function () {
-      const table = document.getElementsByTagName('table');
+      const table = document.querySelector("table");
       const newRow = document.createElement("tr");
       const tdImage = document.createElement("td")
       tdImage.innerHTML = '<img src="asset/1.jpg" alt="smartphone" height="200"/>'
@@ -238,11 +237,9 @@
       newRow.appendChild(tdQuantity)
       newRow.appendChild(tdPrice)
       table.appendChild(newRow)
-
-
     }
     addRow();
-*/
+
     /* ESERCIZIO 14
     Crea una funzione che nasconda le immagini della tabella quando eseguita
   */ // selectorall img .display none
