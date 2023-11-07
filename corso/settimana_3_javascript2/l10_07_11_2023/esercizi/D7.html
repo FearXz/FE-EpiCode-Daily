@@ -119,10 +119,10 @@
     /* ESERCIZIO 4
      Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
     */
-    /* funziona ma da errore di undefined in console
+
     const changeUrls = function () {
       collection1 = document.querySelectorAll('a:not(footer a)');
-      for (let i = 0; i < collection.length; i++) {
+      for (let i = 0; i < collection1.length; i++) {
         collection1[i].href = 'https://www.google.com';
       }
     }
