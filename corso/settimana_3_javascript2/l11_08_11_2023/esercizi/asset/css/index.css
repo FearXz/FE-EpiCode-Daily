@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    background-color: lightblue;
 }
 .line {
     text-decoration: line-through;
@@ -17,7 +18,7 @@ p {
 }
 div {
     border-radius: 20px;
-    background-color: gray;
+    background-color: lightslategray;
 }
 div.task {
     background-color: lightgreen;
