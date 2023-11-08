@@ -1,48 +1,35 @@
 
-const handleSubmit = function (e) {
-    e.preventDefault()     // evita comprtamento di default        
+const handleSubmit = function (event) {
+    event.preventDefault()   // evita il comportamento di default 
     addTask()
     attachComplete()
     attachDelete()
 }
 
 const addTask = function () {
-
-    let inputField = document.getElementById('inputText').value;
-    let containerDiv = document.getElementById('containerDiv');
-
-    let newDiv = document.createElement('div');
-    let newP = document.createElement('p');
-    let newB = document.createElement('button');
-    newP.innerHTML = inputField;
-    newB.innerHTML = 'Delete';
-    newB.classList.add('remove');
-    newDiv.classList.add('task');
-    newDiv.appendChild(newP);
-    newDiv.appendChild(newB);
-    containerDiv.appendChild(newDiv);
-   // document.getElementById('inputText').value = '';
-
+    let inputField = document.querySelector('#newTask input');
+    let divContainer = document.querySelector('#tasks');
+    let newTask =`<div class="task" ><p>${inputField.value}</p><button class="remove">Delete</button></div>`
+    divContainer.innerHTML+= newTask;
 }
 
 const attachComplete = function () {
 
-    let allTask = document.querySelectorAll('.task');
+    let allTask= document.querySelectorAll('.task');
 
-    for (let i = 0; i < allTask.length; i++) {
-        allTask[i].addEventListener('click', function () { this.classList.toggle('line') })
+    for(let i=0; i<allTask.length;i++){    
+
+        allTask[i].addEventListener('click',function () { this.classList.toggle('line')})
     }
 }
 
 const attachDelete = function () {
+    let allButton= document.querySelectorAll('.remove');
 
-    const task = document.querySelectorAll('.task')
-    const remove = document.querySelectorAll('.remove')
+    for(let i=0; i<allButton.length;i++){    
 
-    for (let i = 0; i < task.length; i++) {
-        remove[i].addEventListener('click', function () { this.parentNode.remove() })
+        allButton[i].addEventListener('click',function () { this.parentNode.remove()})
     }
-
 }
 
 window.onload = function () {

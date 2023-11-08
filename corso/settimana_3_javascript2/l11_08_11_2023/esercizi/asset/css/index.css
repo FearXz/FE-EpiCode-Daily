@@ -16,11 +16,11 @@ body {
 p {
     display: inline;
 }
-div {
+div.container {
     border-radius: 20px;
     background-color: lightslategray;
 }
-div.task {
+div.tasks {
     background-color: lightgreen;
     margin: 5px;
 }
