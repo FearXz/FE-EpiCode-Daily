@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Clear interval</h1>
+    <p>Faccio un timer che ricalcola l'ora ogni secondo ed aggiungo un bottone per fermarlo</p>
+    <p id="demo"></p>
+    <button onclick="toggleTimer()" id="toggleButton">Stop Time</button>
+
+    <script>
+        let myTimer;
+        let timerOn;
+
+        startTimer();
+
+        function stampTime() {
+            const date = new Date();
+            document.getElementById('demo').innerHTML = date.toLocaleTimeString();
+        }
+
+        function startTimer() {
+            myTimer = setInterval(stampTime, 1000);
+            timerOn = true;
+        }
+
+        function toggleTimer() {
+            if (timerOn) {
+                clearInterval(myTimer);
+                document.getElementById('toggleButton').innerHTML = 'Start Time';
+            } else {
+                startTimer();
+                document.getElementById('toggleButton').innerHTML = 'Stop Time';
+            }
+            timerOn = !timerOn;
+        }
+
+    </script>
+
+    <p id="demo2"></p>
+    <button onclick="myStopF()">Stoppa</button>
+    <script>
+        const myTimoeout = setTimeout(myGreetin, 3000);
+
+        function myGreetin() {
+            document.getElementById('demo2').innerHTML = 'ciao'
+        }
+        function myStopF() {
+            clearTimeout(myTimoeout);
+        }
+    </script>
+
+</body>
+
+</html>

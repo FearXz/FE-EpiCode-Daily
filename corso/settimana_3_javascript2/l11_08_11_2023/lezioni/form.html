@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <!--creo un campo email e verifico  che sia una possibile mail prima di cliccare bottone-->
+
+    <form id="signUpForm">
+        <input type="email" id="emailField" required>
+        <button id="confirmButton" disabled>Conferma</button>
+    </form>
+    <script>
+        const signUpForm = document.getElementById('signUpForm');
+        const emailField = document.getElementById('emailField');
+        const confirmButton = document.getElementById('confirmButton');
+
+        emailField.addEventListener('keyup', (event) => {
+            isValidEmail = emailField.checkValidity()
+            if (isValidEmail) {
+                confirmButton.disabled = false;
+            }
+            else {
+                confirmButton.disabled = true;
+            }
+        })
+        confirmButton.addEventListener('click',(event)=> signUpForm.submit())
+    </script>
+
+
+</body>
+
+</html>

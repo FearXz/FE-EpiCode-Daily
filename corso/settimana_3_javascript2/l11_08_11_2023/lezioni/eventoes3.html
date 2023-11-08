@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--più eventi assieme  click mouseover mouseout-->
+
+    <button id="clickBtn">bottone clickBtn</button>
+    <p id="hoverP">Paragrafo per fare onmouseover|onmouseout </p> <br><br>
+    <p id="effect"></p>
+
+    <script>
+        //aggancio html
+        const button = document.getElementById('clickBtn');
+        const paragrafo = document.getElementById('hoverP');
+
+        //addEventListener associo  all'evento una  funzione callback
+        button.addEventListener('click', clickResult)
+        paragrafo.addEventListener('mouseover', mouseOver)
+        paragrafo.addEventListener('mouseout', mouseOut)
+
+        // dichiaro funzione
+        function clickResult() {
+            document.getElementById('effect').innerHTML += 'click Event <br>';
+        }
+        function mouseOver () {
+            document.getElementById('effect').innerHTML += 'MouseOver <br>'
+        }
+        function mouseOut () {
+            document.getElementById('effect').innerHTML += 'MouseOut <br>'
+        }
+
+    </script>
+</body>
+
+</html>

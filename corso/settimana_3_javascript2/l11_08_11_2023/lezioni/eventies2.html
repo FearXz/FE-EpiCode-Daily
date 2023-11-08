@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--al click di un bottone stampiamo una scritta-->
+    <button id="bottone">Clicca qui</button>
+    <h1 id="testo"></h1>
+    <script>
+        // ottenere elemento #bottone da html
+        // associare con addEventListener al click una funzione
+        // la funzione stampa dentro ad #testo qualcosa
+        document.getElementById('bottone').addEventListener('click', (event)=>document.getElementById('testo').innerText='Epicode insegna js');
+    </script>
+    <button id="btn">Clicca qui again</button>
+    <p id="para"></p>
+    <script>
+        document.getElementById('btn').addEventListener('click',fun);
+        function fun(){
+            document.getElementById('para').innerHTML= 'Mario dice che js è fantastico';
+        }
+    </script>
+</body>
+</html>

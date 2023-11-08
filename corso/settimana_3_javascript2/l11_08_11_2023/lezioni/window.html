@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>History</h3>
+    <p>History serve per navigare avanti ed indietro nella pagina</p>
+    <h2>BACK</h2>
+    <p>cliccando su back torna alla scheda precedente nel browser</p>
+    <form action="">
+        <button onclick="history.back()">BACK</button>
+    </form>
+    <h2>FORWARD</h2>
+    <p>cliccando su FORWARD imiterà freccia avanti del browser</p>
+    <form action="">
+        <button onclick="history.forward()">FORWARD</button>
+    </form>
+    <h2>GO</h2>
+    <p>passando un parametro dice di quanto muoversi avanti o indietro</p>
+    <form action="">
+        <button onclick="history.go(+2)">FORWARD</button>
+    </form>
+    <h2>OPEN</h2>
+    <p>clicca il bottone per aprire una nuova TAB</p>
+    <form action="">
+        <button onclick="apri()">OPEN</button>
+    </form>
+    <script>
+        function apri() {
+            window.open('https://www.google.it/')
+        }
+    </script>
+    <!----------------------------------------->
+    <h2>MOVETO</h2>
+    <p>clicca il bottone per aprire una nuova TAB</p>
+        <button onclick="openWin()">OPEN</button>
+        <button onclick="moveWin()">MOVETO</button>
+    <script>
+        let myWindow;
+        function openWin() {
+            myWindow.open('', '', 'width=400', 'height=200')
+        }
+        function moveWin() {
+            myWindow.moveTo(500,100);
+        }
+    </script>
+</body>
+
+</html>

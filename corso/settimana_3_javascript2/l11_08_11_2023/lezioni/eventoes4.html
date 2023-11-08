@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>associo più eventi diversi allo stesso elemento</p>
+    <button id="btn">u Bottone!</button>
+    <p id="par"></p>
+    <script>
+        let button = document.getElementById('btn');
+
+        button.addEventListener('mouseover',fOver)
+        button.addEventListener('mouseout',fOut)
+        button.addEventListener('click',fClick)
+
+        function fOver() {
+            button.style.width ='200px';
+            button.style.height ='50px';
+            button.style.background ='black';
+            button.style.color = 'red';
+        }
+        function fOut() {
+            button.style.width ='';
+            button.style.height ='';
+            button.style.background ='';
+            button.style.color = '';
+        }
+        function fClick() {
+            document.getElementById('par').innerHTML+='sto cliccando xD <br>';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Set interval & set timeout</h1>
+    <p>ci permettono di gestire attività differite nel tempo</p>
+    <p>faremo riferimento ad un timer in millisecondi ed avremo dei metodi a disposizione</p>
+
+    <h2>setInterval()</h2>
+    <p>Esegue una funzione in base ad un intervallo di tempo specificato</p>
+
+    <h2>setTimeout()</h2>
+    <p>esegue una funzione dopo un intervallo di tempo</p>
+
+    <h2>clearInterval()</h2>
+    <p>azzera il timer creato con setInterval()</p>
+
+    <h2>cleartimeout()</h2>
+    <p>azzera il timer creato con setTimeout()</p>
+
+    <script>
+        //uso setInterval - mostro qualcosa in console per un intervallo di tempo
+        function saluta() {
+            console.log('Ciao mondo')
+        }
+        setInterval(saluta,5000);
+        // uso setInterval - combinato al costruttore data per stampare ora
+        function showTime() {
+            let data = new Date();
+            let time = data.toLocaleTimeString();
+            console.log(time);
+        }
+        let display = setInterval (showTime,5000);
+        // uso setTimeout per mostrare un messagio in una sola volta console dopo un delay
+        function saluta2() {
+            console.log('Questo arriva dopo');
+        }
+        setTimeout(saluta2,5000);
+        console.log('questo arriva prima');
+        // uso setTimeout per mostrare orario dopo un lasso di tempo
+        function showTime2(){
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            console.log(time);
+            setTimeout(showTime2,7000);
+        }
+        showTime2();
+
+        </script>
+
+</body>
+</html>

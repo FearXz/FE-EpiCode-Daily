@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#" id="test">TEST</a>
+    <!--intercettare evento click e scrivere nella console che ho cliccato-->
+    <script>
+        function clickOnTest(event) {
+            console.log('Ho cliccato su test');
+        }
+        var test = document.getElementById('test');
+        //associo evento click a funzione callback (clickOnTest())
+        test.addEventListener('click',clickOnTest);
+    </script>
+</body>
+
+</html>

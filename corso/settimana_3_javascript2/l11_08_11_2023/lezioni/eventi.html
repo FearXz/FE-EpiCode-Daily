@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi</title>
+</head>
+
+<body>
+    <h1>Eventi js</h1>
+    <p> un evento è un qualcosa che accade all'interno della pagina <br>
+        un utente effettua delle azioni che bisogna intercettare
+    </p>
+    <h2>onload</h2>
+    <p>quando carica il body , praticamente sempre quando apri la pagina</p>
+    <h2>onmouseover</h2>
+    <p>al passaggio del mouse sull'area scelta scatta evento</p>
+    <h2>onmouseout</h2>
+    <p>quando il mouse esce dall'area scelta scatta evento </p>
+    <h2>onclick</h2>
+    <p>quando clicco scateno l'evento</p>
+    <h2>Altri</h2>
+    <p>onkeypress (pressione tasto) - onchange (quando un elemento subisce un cambiamento) <br>
+        - onsubmit (invio diun form) - onfocus|onblur (per evidenziare che un elemento è attivo) <br>
+        (doubleclick - drag and drop - e tanti altri)
+    </p>
+    <h1> Eventi ed Handler</h1>
+    <p>
+        dobbiamo intercettari gli eventi , per farlo si usano gli handler o listener , a questi assoceremo una funzione
+        di callback <br>
+        cioè che si richiama quando ha intercettato un evento.
+    </p>
+    <ul>
+        <li>via codice con addeventlistener()</li>
+        <li>via html con speciali tag</li>
+        <li>o sempre in javascript associando funzioni al DOM</li>
+    </ul>
+    <h2>addEventListener()</h2>
+    <p>il modi più comune e migliore per associare evento al suo handler</p>
+    <script>
+        elemento.addEventListener(evento, callback, [useCapture]);
+        // quasi sempre useCapture non si usa
+    </script>
+    <h3>Evento</h3>
+    <p>gestisce il tipo di evento che vogliamo gestire (click onload ...)</p>
+    <h3>callback</h3>
+    <p>chiamata o invocazione della funzione che dobbiao attivare</p>
+    <h3>useCapture</h3>
+    <p>è opzionale , usato raramente ed è false di default , viene usato per forzare le priorità di un certo evento <br>
+        se associamo più handler allo stesso evento metto true al primo da usare </p>
+    <h3>Parametro Event</h3>
+    <p>è un oggetto che contiene informazioni sull' evento</p>
+    <h3>i vantaggi di addEventListener</h3>
+    <ul>
+        <li>funziona su tutti gli elementi del DOM</li>
+        <li>possiamo gestire più funzioni per lo stesso evento</li>
+        <li>possiamo intercettare più eventi sullo stesso elemento</li>
+        <li>possiamo rimuovere l'associazione tra evento ed handler usando removeEventListener()</li>
+    </ul>
+    <script>
+        test.removeEventListener('click', clickOnTestRemove);
+    </script>
+    <p>è sconsigliato utilizzare le funzioni eventi direttamente nell' html - html css e js devono stare separati</p>
+
+</body>
+
+</html>
