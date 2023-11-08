@@ -1,0 +1,25 @@
+/*text-decoration: line-through;*/
+* {
+    padding: 10px;
+    text-align: center;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.line {
+    text-decoration: line-through;
+}
+p {
+    display: inline;
+}
+div {
+    border-radius: 20px;
+    background-color: gray;
+}
+div.task {
+    background-color: lightgreen;
+    margin: 5px;
+}
