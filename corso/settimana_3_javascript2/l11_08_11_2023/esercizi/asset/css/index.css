@@ -3,6 +3,7 @@
     padding: 10px;
     text-align: center;
 }
+
 body {
     display: flex;
     justify-content: center;
@@ -10,17 +11,21 @@ body {
     margin-top: 100px;
     background-color: lightblue;
 }
+
 .line {
     text-decoration: line-through;
 }
+
 p {
     display: inline;
 }
-div.container {
+
+div {
     border-radius: 20px;
     background-color: lightslategray;
 }
-div.tasks {
+
+div.task {
     background-color: lightgreen;
     margin: 5px;
 }

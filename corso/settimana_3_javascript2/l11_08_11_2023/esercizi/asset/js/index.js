@@ -9,26 +9,26 @@ const handleSubmit = function (event) {
 const addTask = function () {
     let inputField = document.querySelector('#newTask input');
     let divContainer = document.querySelector('#tasks');
-    let newTask =`<div class="task" ><p>${inputField.value}</p><button class="remove">Delete</button></div>`
-    divContainer.innerHTML+= newTask;
+    let newTask = `<div class="task" ><p>${inputField.value}</p><button class="remove">Delete</button></div>`
+    divContainer.innerHTML += newTask;
 }
 
 const attachComplete = function () {
 
-    let allTask= document.querySelectorAll('.task');
+    let allTask = document.querySelectorAll('.task');
 
-    for(let i=0; i<allTask.length;i++){    
+    for (let i = 0; i < allTask.length; i++) {
 
-        allTask[i].addEventListener('click',function () { this.classList.toggle('line')})
+        allTask[i].addEventListener('click', function () { this.classList.toggle('line') })
     }
 }
 
 const attachDelete = function () {
-    let allButton= document.querySelectorAll('.remove');
+    let allButton = document.querySelectorAll('.remove');
 
-    for(let i=0; i<allButton.length;i++){    
+    for (let i = 0; i < allButton.length; i++) {
 
-        allButton[i].addEventListener('click',function () { this.parentNode.remove()})
+        allButton[i].addEventListener('click', function () { this.parentNode.remove() })
     }
 }
 
