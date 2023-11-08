@@ -27,10 +27,10 @@ const addTask = function () {
 
 const attachComplete = function () {
 
-    let all = document.querySelectorAll('.task');
+    let allTask = document.querySelectorAll('.task');
 
-    for (let i = 0; i < all.length; i++) {
-        all[i].addEventListener('click', function () { this.classList.toggle('line') })
+    for (let i = 0; i < allTask.length; i++) {
+        allTask[i].addEventListener('click', function () { this.classList.toggle('line') })
     }
 }
 
