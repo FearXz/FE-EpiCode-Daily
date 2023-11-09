@@ -74,10 +74,12 @@ const createTabellina = function () {
         const cell = document.createElement('div')
         cell.classList.add('casellaTabellina')
         let randomNumber= Math.floor(Math.random() * 76 + 1);
-        while (randomArray.includes(random)) 
+
+        while (randomArray.includes(randomNumber)) 
         {
             randomNumber = Math.floor(Math.random() * 76 + 1)
         }
+
         randomArray.push(randomNumber)
         cell.innerText = randomNumber
         tabellina.appendChild(cell)
