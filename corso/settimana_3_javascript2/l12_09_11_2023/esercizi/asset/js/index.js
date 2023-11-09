@@ -1,11 +1,3 @@
-/*
-1. funzione per generare tabellone
-2. funzione per scrivere i numeri push arary
-3. funzione associata al bottone che genera numeri random
-4. funzione che aggiunge una classList.add('selected')
-EXTRA
-5. funzione che genera tabelline da 24
-*/
 const numeriEstratti = []
 
 const createTable = function () {
