@@ -62,8 +62,8 @@ const createTabellina = function () {
         randomArray.push(randomNumber)
         cell.innerText = randomNumber
         tabellina.appendChild(cell)
-        highlightNumeriEstratti();
     }
+    highlightNumeriEstratti();
 }
 
 const clear = function () {
