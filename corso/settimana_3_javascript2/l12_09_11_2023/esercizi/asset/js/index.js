@@ -22,7 +22,7 @@ const createTable = function () {
 }
 
 const generaNumero = function () {
-    
+
     const num = Math.floor(Math.random() * 76 + 1)
     let newNumber = num;
     while (numeriEstratti.includes(newNumber)) {
@@ -73,15 +73,15 @@ const createTabellina = function () {
     for (let i = 0; i < 26; i++) {
         const cell = document.createElement('div')
         cell.classList.add('casellaTabellina')
-        let randomNumber= Math.floor(Math.random() * 76 + 1);
+        let randomNumber = Math.floor(Math.random() * 76 + 1);
 
-        while (randomArray.includes(randomNumber)) 
-        {
+        while (randomArray.includes(randomNumber)) {
             randomNumber = Math.floor(Math.random() * 76 + 1)
         }
         randomArray.push(randomNumber)
         cell.innerText = randomNumber
         tabellina.appendChild(cell)
+        segnaEstrattiTabelline();
     }
 }
 const segnaEstrattiTabelline = function () {
@@ -94,7 +94,17 @@ const segnaEstrattiTabelline = function () {
     })
 }
 
+const clear = function () {
 
+    
+    let allDiv = document.getElementsByClassName('selected')
+    let allDivArray = Array.from(allDiv);
+    let numberToClear = numeriEstratti.length
+    allDivArray.forEach((div) => {div.classList.remove('selected')})
+    for (let i = 0; i < numberToClear; i++) {
+        numeriEstratti.pop();
+    }
+}
 
 
 
@@ -109,6 +119,9 @@ newNumberButton.addEventListener('click', function () {
 })
 
 const newTabellinaButton = document.getElementById('newTabellina')
-newTabellinaButton.addEventListener('click',createTabellina)
+newTabellinaButton.addEventListener('click', createTabellina)
+
+const clearButton = document.getElementById('clear')
+clearButton.addEventListener('click', clear)
 
 
