@@ -79,14 +79,20 @@ const createTabellina = function () {
         {
             randomNumber = Math.floor(Math.random() * 76 + 1)
         }
-
         randomArray.push(randomNumber)
         cell.innerText = randomNumber
         tabellina.appendChild(cell)
     }
-
 }
-
+const segnaEstrattiTabelline = function () {
+    const all26Div = document.getElementsByClassName('casellaTabellina')
+    const all26DivArray = Array.from(all26Div);
+    all26DivArray.forEach((div) => {
+        if (numeriEstratti.includes(parseInt(div.innerText))) {
+            div.classList.add('selected')
+        }
+    })
+}
 
 
 
@@ -99,6 +105,7 @@ const newNumberButton = document.getElementById('newNumber')
 newNumberButton.addEventListener('click', function () {
     estraiNumero();
     segnaEstratti();
+    segnaEstrattiTabelline();
 })
 
 const newTabellinaButton = document.getElementById('newTabellina')
