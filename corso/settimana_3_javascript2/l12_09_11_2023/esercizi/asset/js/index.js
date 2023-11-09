@@ -44,14 +44,13 @@ const highlightNumeriEstratti = function () {
 
 const createTabellina = function () {
     const container = document.getElementById('containerTabelline')
-    let randomArray = [];
     const h1 = document.createElement('h1')
     h1.innerText = 'TABELLINA';
     const tabellina = document.createElement('div')
     tabellina.classList.add('tabellina')
     container.appendChild(h1)
     container.appendChild(tabellina)
-
+    let randomArray = [];
     for (let i = 0; i < 26; i++) {
         const cell = document.createElement('div')
         cell.classList.add('casellaTabellina')
