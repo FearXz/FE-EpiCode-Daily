@@ -33,7 +33,7 @@ const estraiNumero = function () {
     console.log(numeriEstratti)
 }
 
-const segnaEstratti = function () {
+const highlightNumeriEstratti = function () {
     const all76Div = document.getElementsByClassName('cellaTabellone')
     const all76DivArray = Array.from(all76Div);
     all76DivArray.forEach((div) => {
@@ -70,7 +70,7 @@ const createTabellina = function () {
         randomArray.push(randomNumber)
         cell.innerText = randomNumber
         tabellina.appendChild(cell)
-        segnaEstratti();
+        highlightNumeriEstratti();
     }
 }
 
@@ -88,7 +88,7 @@ createTable();
 const newNumberButton = document.getElementById('newNumber')
 newNumberButton.addEventListener('click', function () {
     estraiNumero();
-    segnaEstratti();
+    highlightNumeriEstratti();
 })
 const newTabellinaButton = document.getElementById('newTabellina')
 newTabellinaButton.addEventListener('click', createTabellina)
