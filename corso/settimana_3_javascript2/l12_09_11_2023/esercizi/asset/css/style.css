@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+}
+h1 {
+    font-size: 30px;
+}
+div#tabellone{
+    display: inline-block;
+    width: 60%;
+    border: 1px solid black;
+}
+#tabellone div {
+    
+    margin: 2px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+div#containerTabelline{
+    display: inline-block;
+    width: 60%;
+}
+.tabellina {
+    margin: 50px;
+    border: 1px solid black;
+}
+
+.casellaTabellina{
+    border: 1px solid black;
+    margin: 2px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.selected {
+    background-color: rgb(149, 128, 128);
+}
+#generatedNumber {
+    margin: 50px;
+}
