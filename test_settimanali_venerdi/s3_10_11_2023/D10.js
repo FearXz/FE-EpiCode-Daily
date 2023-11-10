@@ -534,7 +534,7 @@ colorAllLink();
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
-*//* È MESSO IN UN COMMENTO ALTRIMENTI NON STAMPAVA L'ALBERO
+*//* È MESSO IN UN COMMENTO ALTRIMENTI NON STAMPAVA GLI ALTRI ESERCIZI SOTTO
 function addListElement() {
   let ul = document.getElementById('myList');
   let li = document.createElement('li');
