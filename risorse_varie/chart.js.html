@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donut Timer Chart</title>
+  <!-- Includi Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Aggiungi un canvas per il grafico -->
+<canvas id="donutTimerChart" width="400" height="200"></canvas>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Recupera il riferimento al canvas
+  var ctx = document.getElementById('donutTimerChart').getContext('2d');
+
+  // Crea un array con i dati iniziali del timer
+  var data = {
+    labels: ['Seconds'],
+    datasets: [{
+      data: [30],
+      backgroundColor: ['rgba(75, 192, 192, 0.2)'],
+      borderColor: ['rgba(75, 192, 192, 1)'],
+      borderWidth: 1
+    }]
+  };
+
+  // Crea le opzioni per il grafico donut
+  var options = {
+    cutout: '80%', // Imposta la dimensione della porzione centrale del donut
+    animation: false, // Disabilita l'animazione per evitare effetti indesiderati durante l'aggiornamento
+  };
+
+  // Crea il grafico donut iniziale
+  var donutTimerChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+    options: options
+  });
+
+  // Funzione per aggiornare il grafico del timer donut
+  function updateDonutTimer(seconds) {
+    // Aggiorna i dati del grafico donut
+    donutTimerChart.data.datasets[0].data = [seconds, 30 - seconds];
+    // Ridisegna il grafico donut
+    donutTimerChart.update();
+  }
+
+  // Simula il countdown del timer
+  var secondsRemaining = 30;
+  var timerInterval = setInterval(function () {
+    updateDonutTimer(secondsRemaining);
+    secondsRemaining--;
+
+    // Se il timer raggiunge 0, interrompi l'intervallo
+    if (secondsRemaining < 0) {
+      clearInterval(timerInterval);
+      alert('Timer scaduto!');
+    }
+  }, 1000);
+});
+</script>
+
+</body>
+</html>
