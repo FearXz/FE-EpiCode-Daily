@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsiveness</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      img {
+        width: 90%;
+        display: block;
+        /* left & right */
+        margin-inline: auto;
+        /* top */
+        margin-block-start: 2rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0;
+      }
+
+      h1 {
+        font-size: 44px;
+        font-weight: 300;
+      }
+
+      main {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      button {
+        border: none;
+        background-color: palegoldenrod;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+      }
+
+      /* BREAKPOINT PRINCIPALI: 
+        - 0px (mobile)    
+        - 576px (small)
+        - 768px (medium)
+        - 992px (large)
+        - 1200px (xlarge)
+        - 1400px (xxlarge)
+         
+        */
+
+      /* con max-width si va dal più grande al più piccolo (dando la possibilità ai valori inferiori di applicare le loro regole)*/
+      /* da 0px --------------- 700px */
+      /* @media screen and (max-width: 700px) {
+            h1 {
+                font-size: 64px
+            }
+        } */
+
+      /* da 0px --------------- 500px */
+      /* @media screen and (max-width: 500px) {
+            h1 {
+                font-size: 44px
+            }
+        } */
+
+      /* da 500px --------------- infinito */
+      @media screen and (min-width: 500px) {
+        img {
+          width: 100%;
+          height: 25dvh;
+          object-fit: cover;
+          /* reset della proprietà precedentemente applicata */
+          margin-block-start: unset;
+        }
+
+        h1 {
+          font-size: 64px;
+        }
+      }
+
+      /* con min-width l'approccio cambia, si va sempre dal più piccolo al più grande */
+      /* da 900px --------------- infinito */
+      @media screen and (min-width: 900px) {
+        main {
+          text-align: initial;
+        }
+
+        p {
+          font-size: 1.6rem;
+        }
+      }
+
+      /* da 1200px --------------- infinito */
+      @media screen and (min-width: 1200px) {
+        h1 {
+          font-size: 104px;
+        }
+
+        p {
+          font-size: 2.9rem;
+        }
+      }
+
+      /* da 700px --------------- 1000px */
+      @media screen and (min-width: 700px) and (max-width: 1000px) {
+        h1 {
+          background-color: aquamarine;
+        }
+      }
+
+      @media print {
+        img,
+        button {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+          background-color: black;
+          color: white;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <img
+      src="https://images.unsplash.com/photo-1700469339941-0768a5365344?q=80&w=1206&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="green leaves"
+    />
+    <main>
+      <h1>Titolo della pagina</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga sit nulla libero quidem et quaerat vitae nam eius
+        repellendus. Voluptatem, dolore eaque corporis asperiores repellat architecto ea aut pariatur possimus.
+      </p>
+      <button>Click me</button>
+    </main>
+  </body>
+</html>
