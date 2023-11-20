@@ -284,6 +284,10 @@ footer a {
   }
   aside div {
     display: inline-block;
-    width: 33%;
+    width: 33.3%;
+    margin: 0 -4px;
+  }
+  aside div p {
+    height: 60px;
   }
 }
