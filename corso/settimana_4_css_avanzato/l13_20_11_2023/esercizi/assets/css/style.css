@@ -269,11 +269,11 @@ footer a {
   }
   section {
     border-radius: 20px;
-    line-height: 40px;
+    line-height: 35px;
   }
   input {
     height: 52px;
-    width: 380px;
+    width: 65%;
   }
   input[placeholder] {
     padding-left: 20px;
