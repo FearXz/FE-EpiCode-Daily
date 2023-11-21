@@ -10,82 +10,70 @@ body {
 * {
   box-sizing: border-box;
 }
+
 @media screen and (min-width: 0px) {
   .return-icon {
-    height: 40px;
-    width: 40px;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
     position: fixed;
-    right: -10px;
+    right: -5px;
     bottom: 30px;
     border-radius: 10px;
-    box-shadow: 5px, 5px, 5px, white;
     border: 2px solid white;
     z-index: 1000;
+    box-shadow: 0px 0px 5px white;
   }
-  .return-icon div {
-    display: inline-block;
-    position: absolute;
-    right: 5px;
-    top: 3px;
-    color: red;
+  .return-icon i {
+    font-size: 30px;
+    color: #d30909;
+    padding: 10px;
   }
   .calendar-icon {
-    height: 40px;
-    width: 40px;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
     position: fixed;
-    right: -10px;
-    bottom: 80px;
+    right: -5px;
+    bottom: 90px;
     border-radius: 10px;
-    box-shadow: 5, 5, 5, white;
     border: 2px solid white;
     z-index: 1000;
+    box-shadow: 0px 0px 5px white;
   }
-  .calendar-icon div {
-    display: inline-block;
-    position: absolute;
-    right: 5px;
-    top: 3px;
-    color: blue;
+  .calendar-icon i {
+    font-size: 30px;
+    color: #1241da;
+    padding: 10px;
   }
   .add-icon {
-    height: 40px;
-    width: 40px;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
     position: fixed;
-    right: -10px;
-    bottom: 130px;
+    right: -5px;
+    bottom: 150px;
     border-radius: 10px;
-    box-shadow: 5, 5, 5, white;
     border: 2px solid white;
     z-index: 1000;
+    box-shadow: 0px 0px 5px white;
   }
-  .add-icon div {
-    display: inline-block;
-    position: absolute;
-    right: 5px;
-    top: 3px;
-    color: blue;
+  .add-icon i {
+    font-size: 30px;
+    color: #1241da;
+    padding: 10px;
   }
 }
 @media screen and (min-width: 700px) {
   .return-icon {
-    position: fixed;
-    right: -10px;
+    right: -5px;
     bottom: 30px;
   }
 
   .calendar-icon {
-    position: fixed;
-    right: -10px;
-    top: 80px;
+    right: -5px;
+    top: 90px;
+    bottom: unset;
   }
 
   .add-icon {
-    position: fixed;
-    right: -10px;
+    right: -5px;
     top: 30px;
+    bottom: unset;
   }
 }
 
