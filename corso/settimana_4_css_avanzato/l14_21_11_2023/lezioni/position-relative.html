@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./positioning.css">
+    <title>Positio Relative</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .aqua {
+            background-color: aqua;
+            position: relative;
+            top: 150px;
+        }
+
+        .coral {
+            background-color: coral;
+        }
+
+        .antique {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+
+<!-- position RELATIVE serve quando vogliamo muovere un elemento relativamente alla sua posizione ORIGINALE 
+    es. aiuta nell'allineare di qualche px un'icona rispetto al testo adiacente, o piccoli aggiustamenti in generale
+
+    tenendo conto che:
+    - riserva lo spazio originario
+    - gli altri elementi rispetteranno questo spazio
+-->
+
+<body>
+    <h1>Position - Relative</h1>
+    <div class="container">
+        <div class="box aqua"></div>
+        <div class="box coral"></div>
+        <div class="box antique"></div>
+    </div>
+
+</body>
+
+</html>

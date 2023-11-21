@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul,
+p {
+  margin-block: 0;
+}
+
+img {
+  float: left;
+  margin-right: 10px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  shape-outside: circle(50%);
+  border-radius: 50%;
+}
+header {
+  background-color: paleturquoise;
+}
+
+.container {
+  border: 2px solid lightgray;
+  width: 900px;
+  margin-inline: auto;
+  margin-block-start: 2rem;
+}
+
+.list {
+  text-align: center;
+}
+
+.list li {
+  display: inline-block;
+  margin-inline: 0.5rem;
+}
+
+article {
+  padding: 1rem;
+  display: flow-root;
+}
+
+/* applicato ad un elemento di blocco, fa sì che questo elemento si posizioni sotto a quello flottante e costringerà il contenitore ad estendersi includendo l'intero elemento flottante al suo interno*/
+/* .clearfix {
+  clear: both;
+} */
+
+/* la classe clearfix in questo caso crea un reset attraverso uno pseudo elemento, senza bisogno di creare elementi fisici nell'html */
+
+/* .clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+} */
+
+/* griglia precisa di 3 elementi flottanti al 33% (considera che c'è display: flow-root sul genitore) */
+.box {
+  width: 33.333%;
+  height: 100px;
+  float: left;
+}
+.aqua {
+  background-color: aqua;
+}
+.coral {
+  background-color: coral;
+}
+.antique {
+  background-color: antiquewhite;
+}

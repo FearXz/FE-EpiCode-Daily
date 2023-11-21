@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul,
+p {
+  margin-block: 0;
+}
+h1 {
+  text-align: center;
+}
+
+.container {
+  border: 2px solid lightgray;
+  width: 900px;
+  margin-inline: auto;
+  margin-block-start: 2rem;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./positioning.css">
+    <title>z-index</title>
+    <style>
+        /* elementi posizionati non possono esistere sullo stesso "livello",
+        gli verrà intrinsecamente assegnato un livello secondo principi di cascade model (elemento più in fondo sarà visto su un livello più alto) 
+        
+        si può modificare questo comportamento di base andando a forzare un livello specifico grazie alla proprietà z-index
+        */
+        .container {
+            min-height: 30vh;
+            position: relative;
+            background-color: lightgreen;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .aqua {
+            background-color: aqua;
+            left: -25px;
+            top: -25px;
+            z-index: 2;
+        }
+
+        .coral {
+            background-color: coral;
+            z-index: 1;
+        }
+
+        .antique {
+            background-color: antiquewhite;
+            left: 25px;
+            top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>z-index</h1>
+    <div class="container">
+        <div class="box aqua"></div>
+        <div class="box coral"></div>
+        <div class="box antique"></div>
+    </div>
+
+</body>
+
+</html>

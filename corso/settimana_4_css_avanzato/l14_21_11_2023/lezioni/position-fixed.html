@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./positioning.css">
+    <title>Position Fixed</title>
+    <style>
+        /* position FIXED ci serve per attaccare un elemento allo schermo, in maniera che se anche la pagina scrolla lui rimane fisso su dimensioni fisse e assolute 
+        es. posizionare una navbar fissa, un bottone di supporto in fondo a destra dello schermo che rimane fisso allo scorrere della pagina.
+         
+        tenendo conto che:
+        - non riserverà alcuno spazio. 
+        - non viene contenuto da nessun genitore in position relative o simili. 
+        - è indifferente la posizione dell'elemento nell'html
+        */
+        .container {
+            min-height: 300vh;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        header {
+            background-color: plum;
+            color: purple;
+            height: 60px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 99;
+        }
+
+        header ul {
+            margin-block: 0;
+            padding-block: 1.2rem;
+        }
+
+        header ul li {
+            display: inline-block;
+            margin-inline: 0.5rem;
+        }
+
+
+        .aqua {
+            background-color: aqua;
+            position: relative;
+            top: 150px;
+        }
+
+        .coral {
+            background-color: coral;
+        }
+
+        .antique {
+            background-color: antiquewhite;
+            /* il fatto di avere un container con position relative non influenza il posizionamento di questo elemento "fixed" */
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Position - Fixed</h1>
+    <header>
+        <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="box aqua"></div>
+        <div class="box coral"></div>
+        <div class="box antique"></div>
+    </div>
+
+</body>
+
+</html>

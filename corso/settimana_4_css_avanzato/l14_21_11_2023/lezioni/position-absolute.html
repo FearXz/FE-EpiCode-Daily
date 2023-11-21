@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./positioning.css">
+    <title>Positio Absolute</title>
+    <style>
+        /*
+        position ABSOLUTE serve per muovere un elemento relativamente ad un riferimento, 
+        tipicamente un contenitore in position RELATIVE (o uno diverso da STATIC).
+        es. aiuta nel posizionare un elemento sopra un altro,
+        oppure ad agganciarlo rispetto ai confini di un genitore (quando le dimensioni cambiano, lui segue in modo dinamico) 
+        
+        tenendo conto che: 
+        - riserva lo spazio originario 
+        - gli altri elementi rispetteranno questo spazio
+
+        */
+
+
+        /* :root corrisponde ad <html>, è il contesto principale, quello accessibile a tutti gli elementi della pagina */
+
+        :root {
+            /* variabili di default le definiamo qui, modificabile in contesti più interni per modificare il comportamento di elementi 
+            specifici senza cambiare il comportamento base di altri elementi che si riferiscono alle stesse variabili (vedi selettore .card in basso)*/
+            --card-radius: 16px;
+            --label-top-position: 20px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            min-height: 50vh;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .aqua {
+            background-color: aqua;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 50%;
+            transform: translate(50%, 50%)
+        }
+
+        .aqua span {
+            /* un elemento inline -posizionato in absolute- non ha bisogno di un display: inline-block/block per ricevere dimensioni */
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            /* top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0; */
+            /* inset equivale a scrivere top, right, bottom, left con un'unica proprietà */
+            inset: 0px;
+            left: 10px;
+            margin: auto;
+            border-style: solid;
+            border-width: 23px 0 23px 42px;
+            border-color: transparent transparent transparent white;
+
+        }
+
+        .coral {
+            background-color: coral;
+            position: relative;
+        }
+
+        .coral::before {
+            /* ricordarsi sempre di applicare un content, seppur vuoto, altrimenti il pseudo-elemento non si renderizza */
+            content: "";
+            background-color: white;
+            width: 3px;
+            position: absolute;
+            inset: 0px;
+            margin: auto;
+        }
+
+        .coral::after {
+            /* ricordarsi sempre di applicare un content, seppur vuoto, altrimenti il pseudo-elemento non si renderizza */
+            content: "";
+            background-color: white;
+            height: 3px;
+            position: absolute;
+            inset: 0px;
+            margin: auto;
+        }
+
+        .antique {
+            background-color: antiquewhite;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .card {
+            /* posso modificare il valore di una variabile in un contesto più annidato */
+            /* --card-radius: 24px; */
+            position: relative;
+            display: inline-block;
+            width: 33.333%;
+            margin-right: -4px;
+            border: 1px solid #c6c6c6;
+            border-radius: var(--card-radius);
+        }
+
+        .card:nth-of-type(2) {
+            --card-radius: 36px;
+            --label-top-position: 40px;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-top-left-radius: var(--card-radius);
+            border-top-right-radius: var(--card-radius);
+        }
+
+        .card h3 {
+            position: absolute;
+            color: white;
+
+            margin-block: 0;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+
+            /* troncatua del testo su singola linea (funziona solo per singole linee!) */
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .card p {
+            /* line-clamp. troncatura del testo multi linea (valore di linee a piacere) */
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+        .card button {
+            display: block;
+            margin-inline: auto;
+            margin-block-start: 1rem;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .no-border {
+            border: none;
+        }
+
+        .img-wrapper {
+            position: relative;
+        }
+
+        .label {
+            position: absolute;
+            background-color: crimson;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 0.75rem;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            top: var(--label-top-position);
+            right: -3px;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <h1>Position - Absolute</h1>
+    <div class="container">
+        <div class="box aqua">
+            <span></span>
+        </div>
+        <div class="box coral"></div>
+        <div class="box antique"></div>
+    </div>
+
+    <div class="container no-border">
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1682687218608-5e2522b04673?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <h3>titolo</h3>
+
+                <span class="label">-10%</span>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, fugiat praesentium repudiandae fuga
+                    similique nulla, quia magnam libero, et id provident alias saepe. Excepturi tenetur quia quae ad
+                    enim
+                    accusamus?</p>
+                <button>Scopri di più</button>
+            </div>
+        </div>
+        <!-- <div class="card" style="--card-radius: 36px; --label-top-position: 40px"> -->
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1700540291181-2d7be661477e?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, nesciunt.</h3>
+                <span class="label">-50%</span>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aut, </p>
+                <button>Scopri di più</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1700495723803-f7a005efe2a4?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <h3>titolo</h3>
+                <span class="label">-22%</span>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab veniam dolorem minima aliquam totam
+                    repellendus aperiam nam soluta nemo corporis!</p>
+                <button>Scopri di più</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
