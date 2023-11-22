@@ -5,22 +5,18 @@ body {
   color: #732104;
   padding: 1rem;
 }
-header {
-  background-color: #fef7e2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 80px;
-  min-width: 360px;
-  margin-block-end: 50px;
-}
+
 .header-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  flex-grow: 1;
+  background-color: #fef7e2;
+  border-radius: 80px;
+  min-width: 360px;
+  margin-block-end: 50px;
+  font-weight: 600;
 }
 .button-wrapper {
   display: flex;
@@ -123,4 +119,23 @@ span {
 }
 .last-container img {
   width: 100%;
+}
+@media screen and (min-width: 575px) {
+  .header-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: unset;
+  }
+  .button-wrapper {
+    padding: 0rem;
+  }
+  .button-wrapper:nth-of-type(2) {
+    order: -1;
+  }
+  header .button-wrapper > div {
+    padding-block: 1.25rem;
+    padding-inline: 0.5rem;
+    min-width: unset;
+    flex-shrink: 0;
+  }
 }
