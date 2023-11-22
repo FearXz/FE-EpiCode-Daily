@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #732104;
+  padding: 1rem;
+}
+header {
+  background-color: #fef7e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 80px;
+  min-width: 360px;
+  margin-block-end: 50px;
+}
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  flex-grow: 1;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  width: 100%;
+}
+header .button-wrapper > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem;
+  background-color: #ffdf7f;
+  border-radius: 80px;
+  min-width: 110px;
+}
+header div.header-shop-button {
+  font-size: 2rem;
+  padding: 2rem 3rem;
+  min-width: 230px;
+}
+.header-shop-button img {
+  max-width: 30px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-width: 360px;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  background-color: #fef7e2;
+}
+.card img {
+  width: 100%;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+}
+span {
+  font-weight: 600;
+}
+.card-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-block: 1rem;
+}
+.card-button {
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+}
+.card-button div {
+  border-radius: 80px;
+  background-color: #ffdf7f;
+  padding: 1rem 3rem;
+}
+.last-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background-color: #fef7e2;
+}
+.text-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.last-container p {
+  font-weight: 400;
+}
+.last-container img {
+  width: 100%;
+}
