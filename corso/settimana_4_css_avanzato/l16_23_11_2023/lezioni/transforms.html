@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body {
+            margin-left: 200px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgrey;
+            margin-top: 5rem;
+        }
+
+        .box>div {
+            width: 100%;
+            height: 100%;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box.n1 div {
+            /* la percentuale nel contesto di un translate si riferisce alle dimensioni dell'elemento, non del genitore. */
+            transform: translate(50%, 50%);
+        }
+
+        .box.n2 div {
+            /* transform: rotate(.5turn) */
+            transform: translateX(50px) rotate(-120deg);
+        }
+
+        .box.n3 div {
+            transform: scale(0.6);
+        }
+
+        .box.n4 div {
+            transform: skew(343deg, 348deg);
+        }
+
+        .box.n5 div {
+            transform: perspective(300px) translateZ(150px) rotate3d(1, 1, 1, 90deg);
+        }
+
+        .box.n6>div {
+            display: block;
+            transform: perspective(1000px) rotate3d(0, 1, 0, 60deg) scale3d(1.5, 1.5, 2.5);
+            transform-style: preserve-3d;
+        }
+
+        .box.n6>div>div:first-of-type {
+            transform: perspective(1000px) rotate3d(0, 1, 0, 285deg);
+            background-color: purple;
+        }
+
+        .box.n6>div>div:nth-of-type(2) {
+            transform: perspective(1000px) rotate3d(0, 1, 0, 85deg);
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box n1">
+        <div>translate</div>
+    </div>
+    <div class="box n2">
+        <div>translate + rotate</div>
+    </div>
+    <div class="box n3">
+        <div>scale</div>
+    </div>
+    <div class="box n4">
+        <div>skew</div>
+    </div>
+
+    <div class="box n5">
+        <div>perspective</div>
+    </div>
+
+    <div class="box n6">
+        <div>
+            scale3d
+            <div>child1</div>
+            <div>child2</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

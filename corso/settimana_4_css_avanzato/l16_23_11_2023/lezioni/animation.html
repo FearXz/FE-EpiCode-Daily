@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation + keyframes</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 100px;
+            background-color: palegreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5rem;
+            cursor: pointer;
+            animation: boxChangeEffect 3s cubic-bezier(.17, .67, .87, .18) 2 alternate 1s both;
+        }
+
+        @keyframes boxChangeEffect {
+            0% {
+                width: 100px;
+                background-color: palegoldenrod;
+            }
+
+            30% {
+                width: 500px;
+            }
+
+            50% {
+                width: 300px;
+                background-color: palevioletred;
+            }
+
+            100% {
+                width: 800px;
+                background-color: paleturquoise;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">Animation</div>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox playground</title>
+    <link rel="stylesheet" href="./flex-playground.css">
+</head>
+
+<body>
+    <h2>Flex Containers</h2>
+    <hr>
+    <h2>Flex container (direzione row)</h2>
+    <div class="container">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box goldenrod">3</div>
+        <div class="box violetred">4</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex container (direzione row-reverse)</h2>
+    <div class="container n2">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box goldenrod">3</div>
+        <div class="box violetred">4</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex container (direzione column)</h2>
+    <div class="container n3">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box goldenrod">3</div>
+        <div class="box violetred">4</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex container (direzione column-reverse)</h2>
+    <div class="container n4">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box goldenrod">3</div>
+        <div class="box violetred">4</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex container (con wrap)</h2>
+    <div class="container n5">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box goldenrod">3</div>
+        <div class="box violetred">4</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex container row (con justify-content: space-between)</h2>
+    <div class="container n6">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box goldenrod">3</div>
+        <div class="box violetred">4</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex container column (con justify-content: space-between)</h2>
+    <div class="container n7">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box goldenrod">3</div>
+        <div class="box violetred">4</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex container column (con colonna posizionata in basso a destra)</h2>
+    <div class="container n8">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box goldenrod">3</div>
+        <div class="box violetred">4</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex container (con align-items: stretch)</h2>
+    <div class="container n9">
+        <div class="box aqua">Lorem, ipsum dolor.</div>
+        <div class="box coral">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, non!</div>
+        <div class="box goldenrod">Lorem, ipsum.</div>
+        <div class="box violetred">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum est eos obcaecati
+            quas repudiandae magnam, fugit neque sapiente blanditiis vero.</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex container (con align-items: baseline)</h2>
+    <div class="container n10">
+        <div class="box aqua">
+            <img src="https://picsum.photos/100/200" alt="">
+            <div>Lorem, ipsum dolor.</div>
+        </div>
+        <div class="box coral">
+            <img src="https://picsum.photos/100/120" alt="">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, non!</div>
+        </div>
+        <div class="box goldenrod">
+            <img src="https://picsum.photos/100/100" alt="">
+            <div>Lorem, ipsum.</div>
+        </div>
+        <div class="box violetred">
+            <img src="https://picsum.photos/100/110" alt="">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum est eos obcaecati
+                quas repudiandae magnam, fugit neque sapiente blanditiis vero.
+            </div>
+        </div>
+        <div class="box palegreen">
+            <img src="https://picsum.photos/100/100" alt="">
+            <div>5</div>
+        </div>
+    </div>
+
+    <h2>Flex Items</h2>
+    <hr>
+
+    <h2>Flex Item (con order property)</h2>
+    <div class="container n11">
+        <div class="box aqua" style="order: 4">1(4)</div>
+        <div class="box coral" style="order: 3">2(3)</div>
+        <div class="box goldenrod" style="order: -1">3(-1)</div>
+        <div class="box violetred" style="order: 2">4(2)</div>
+        <div class="box palegreen" style="order: 5">5(5)</div>
+    </div>
+
+    <h2>Flex Item (con grow property sui flex-items)</h2>
+    <div class="container n12">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box goldenrod"></div>
+        <div class="box violetred">4</div>
+        <div class="box palegreen">5</div>
+    </div>
+
+    <h2>Flex Item (con grow property sui flex-items)</h2>
+    <div class="container n13">
+        <div class="box aqua"></div>
+        <div class="box coral"></div>
+        <div class="box goldenrod"></div>
+        <div class="box violetred"></div>
+        <div class="box palegreen"></div>
+    </div>
+
+    <h2>Flex Item (con align-self)</h2>
+    <div class="container n14">
+        <div class="box aqua"></div>
+        <div class="box coral"></div>
+        <div class="box goldenrod"></div>
+        <div class="box violetred"></div>
+        <div class="box palegreen"></div>
+    </div>
+
+    <h2>Flex Item (con justify-self artificioso)</h2>
+    <div class="container n15">
+        <div class="box aqua"></div>
+
+        <span>
+            <div class="box coral"></div>
+            <div class="box goldenrod"></div>
+            <div class="box violetred"></div>
+            <div class="box palegreen"></div>
+        </span>
+    </div>
+
+    <h2>Flex Item (con justify-self artificioso v2 ottimizzata)</h2>
+    <div class="container n16">
+        <div class="box aqua"></div>
+        <div class="box coral"></div>
+        <div class="box goldenrod"></div>
+        <div class="box violetred"></div>
+        <div class="box palegreen"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-block-end: 5rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container:not(.n10) .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aqua {
+  background-color: aqua;
+}
+
+.coral {
+  background-color: coral;
+}
+
+.goldenrod {
+  background-color: palegoldenrod;
+}
+
+.violetred {
+  background-color: palevioletred;
+}
+
+.palegreen {
+  background-color: palegreen;
+}
+
+.container {
+  /* una dimensione come max-width permetterà al contenitore di restringersi qualora il viewport scendesse sotto i 900px */
+  max-width: 900px;
+  margin-inline: auto;
+  background-color: #ebebeb;
+  border: 2px solid lightgrey;
+
+  /* con display flex stiamo creando un contesto (contenitore) flex per degli elementi che si comporteranno in maniera "flessibile",
+     gli elementi cercheranno di rimanere sempre sulla stessa linea (sulla direzione del flex), 
+    anche a costo di restringersi se non fosse abbastanza spazio */
+  display: flex;
+  /* (default)
+    flex-direction: row  */
+}
+
+.container.n2 {
+  flex-direction: row-reverse;
+}
+
+.container:where(.n3, .n4, .n5, .n7, .n8, .n14) {
+  min-height: 70vh;
+}
+
+.container.n3 {
+  flex-direction: column;
+}
+
+.container.n4 {
+  flex-direction: column-reverse;
+}
+
+.container.n5 {
+  flex-wrap: wrap;
+  /* align-content stabilisce IN UN CONTENITORE CHE USA WRAP come le righe di elementi verranno distribuite sulla verticale */
+  align-content: center;
+  /* con align-content center abbiamo posizionato il blocco di elementi al centro (senza spazio tra le righe) */
+
+  /* 
+    per altre possibilità riferirsi al link:
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-align-content 
+    */
+}
+
+.container.n6 {
+  justify-content: space-between;
+
+  /* 
+    per altre possibilità riferirsi al link:
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content                        
+    */
+}
+
+.container.n7 {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container.n8 {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.container.n9 {
+  align-items: stretch;
+}
+
+.container:where(.n9, .n10) .box {
+  height: unset;
+}
+
+.container.n10 {
+  align-items: baseline;
+  justify-content: center;
+  padding-block: 3rem;
+}
+
+/* operiamo sui flex-items (figli di un container flex) */
+
+.container:where(.n12, .n13) .box {
+  flex-grow: 1;
+}
+
+.container:where(.n12, .n13) .box:nth-of-type(3) {
+  flex-grow: 10;
+  flex-shrink: 10;
+
+  background-image: url("https://images.unsplash.com/photo-1700359387203-d24d08d07b04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  /* width: 250px; */
+}
+
+.container.n13 .box:nth-of-type(3) {
+  /* flex-basis: 300px;
+  flex-shrink: 0; */
+
+  flex: 10 0 300px;
+}
+
+.container.n14 {
+  justify-content: center;
+  align-items: center;
+}
+
+.container.n14 .box:nth-of-type(4) {
+  align-self: flex-end;
+}
+
+/*!!! justify-self non eiste in contesti flex !!! */
+
+/* di seguito due esempi di come replicarlo tramite due differenti approcci */
+.container.n15 {
+  justify-content: space-between;
+}
+.container.n15 span {
+  display: flex;
+}
+
+.container.n16 .box:last-of-type {
+  margin-left: auto;
+}

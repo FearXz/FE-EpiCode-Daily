@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+
+        .fadeIn {
+            animation: fade-in 3s 4s both;
+        }
+
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .flex {
+            display: flex;
+            background-color: lightgray;
+            min-height: 100vh;
+        }
+
+        @media screen and (max-width: 767px) {
+            .flex {
+                flex-direction: column;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            row-gap: 1rem;
+        }
+
+        ul li {
+            display: inline-block;
+            padding: 0 0.5rem;
+            text-align: center;
+        }
+
+
+        ul li:nth-of-type(3) {
+            order: -1;
+            width: 100%;
+        }
+
+        ul li:nth-of-type(3) div {
+            padding: 1.5rem 2rem;
+        }
+
+        ul li:not(:nth-of-type(3)) {
+            width: 50%;
+        }
+
+        ul li div {
+            background-color: white;
+            border-radius: 50px;
+            padding-block: 0.25rem;
+        }
+
+        nav {
+            background-color: palevioletred;
+            padding: 0.5rem;
+        }
+
+        main {
+            background-color: paleturquoise;
+            flex-grow: 1;
+        }
+
+        /* @media screen and (min-width: 576px) and (max-width: 767px) {
+            ul {
+                flex-direction: row;
+            }
+
+            ul li:nth-of-type(3) {
+                order: 0;
+            }
+        } */
+
+        @media screen and (min-width: 576px) {
+            ul {
+                flex-wrap: nowrap;
+            }
+
+            ul li:nth-of-type(3) {
+                order: 0;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            nav {
+                width: 240px;
+            }
+
+            ul {
+                flex-direction: column;
+            }
+
+            ul li:nth-of-type(3) {
+                order: -1;
+            }
+
+            ul li:not(:nth-of-type(3)) {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="fadeIn">
+
+    <div class="flex">
+        <nav>
+            <ul>
+                <li>
+                    <div>elemento</div>
+                </li>
+                <li>
+                    <div>elemento</div>
+                </li>
+                <li>
+                    <div class="fadeIn" style="animation-delay: 7s;">elemento</div>
+                </li>
+                <li>
+                    <div>elemento</div>
+                </li>
+                <li>
+                    <div>elemento</div>
+                </li>
+            </ul>
+        </nav>
+        <main></main>
+
+    </div>
+
+</body>
+
+</html>

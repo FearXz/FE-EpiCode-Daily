@@ -1,0 +1,118 @@
+:root {
+  --nav-height: 86px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  /* una dimensione come max-width permetterà al contenitore di restringersi qualora il viewport scendesse sotto i 900px */
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+header {
+  background-color: palevioletred;
+  color: white;
+}
+
+header .container {
+  padding: 1rem;
+  min-height: var(--nav-height);
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+header nav {
+  /* margin-right: auto; */
+  flex-grow: 1;
+}
+
+header nav ul {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  column-gap: 16px;
+  padding: 0;
+}
+
+button {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+header .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  flex-shrink: 0;
+}
+
+.flex {
+  display: flex;
+  height: calc(100vh - var(--nav-height));
+}
+
+main {
+  flex-grow: 1;
+}
+
+aside {
+  background-color: black;
+  color: white;
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+aside li {
+  padding-block: 0.25rem;
+}
+
+aside a {
+  color: purple;
+}
+
+aside .links {
+  /* questo margin top mi permette di spostare link e bottone in fondo alla sidebar */
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+aside button {
+  background-color: purple;
+}
+
+main {
+  background-color: aquamarine;
+  padding: 1rem;
+}
+
+main .cards {
+  display: flex;
+  column-gap: 10px;
+}
+
+@media screen and (max-width: 575px) {
+  header .container {
+    flex-direction: column;
+  }
+  header nav {
+    order: -1;
+  }
+}

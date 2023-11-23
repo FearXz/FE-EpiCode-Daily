@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        body {
+            margin-left: 50px;
+        }
+
+        p,
+        h3 {
+            margin: 0;
+        }
+
+        .box {
+            width: 400px;
+            height: 100px;
+            background-color: palegreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5rem;
+            cursor: pointer;
+            transition: all 200ms linear;
+        }
+
+        .box:hover {
+            width: 800px;
+            background-color: palevioletred;
+            height: 200px;
+            margin-bottom: 5rem;
+            transition: width 1s linear, background-color 3s cubic-bezier(.86, 1.45, .71, .41), height 1s 3s cubic-bezier(.86, 1.45, .71, .41);
+        }
+
+        button {
+            background-color: aquamarine;
+            border: 2px solid aquamarine;
+            box-shadow: 0 6px 10px -4px rgb(0 0 0 / 10%);
+            border-radius: 10px;
+            padding: 0.5rem 3.5rem;
+            cursor: pointer;
+            transition: all 50ms;
+        }
+
+        button:hover {
+            transition: all 300ms;
+            background-color: white;
+            box-shadow: 0 12px 24px -10px rgb(0 0 0 / 35%);
+            transform: scale(1.05) translateY(-4px);
+        }
+
+        .card {
+            display: inline-block;
+            margin-top: 5rem;
+            border: 1px solid #ebebeb;
+            overflow: hidden;
+            border-radius: 12px;
+            max-width: 400px;
+        }
+
+        .card-body {
+            /* padding: 1rem; */
+            display: flex;
+            flex-direction: column;
+            height: 0px;
+            transition: all 300ms 150ms;
+        }
+
+        .card-body :where(h3, p, button) {
+            opacity: 0;
+            transition: opacity 200ms
+        }
+
+        .card-body h3 {
+            transition-delay: 400ms
+        }
+
+        .card-body p {
+            margin-bottom: 1rem;
+            transition-delay: 550ms
+        }
+
+        .card-body button {
+            transition-delay: 700ms
+        }
+
+        .card .card-img img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .card-img {
+            position: relative;
+        }
+
+        .card-img::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: transparent;
+            transition: background-color 200ms;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: -15px;
+            font-size: 4rem;
+            font-family: arial;
+            font-weight: 900;
+            color: white;
+            letter-spacing: -4px;
+            opacity: 0.9;
+            translate: -220px;
+            transition: translate 300ms;
+        }
+
+        .card:hover .text-overlay {
+            translate: initial;
+        }
+
+        .card:hover .card-img::before {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover .card-body {
+            padding: 1rem;
+            height: 147px;
+        }
+
+        .card:hover .card-body :where(h3, p, button) {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">transition</div>
+    <button>click me</button>
+
+    <div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1677612968800-4d9f1104d251?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    alt="">
+
+                <p class="text-overlay">Hiking</p>
+            </div>
+
+            <div class="card-body">
+                <h3>Titolo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                    natus incidunt rerum nobis enim
+                    commodi
+                    saepe in. Vitae dolore illo nulla et, libero blanditiis aliquam nesciunt corrupti, officia quod
+                    quia?
+                </p>
+                <button>See more</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
