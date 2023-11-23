@@ -34,12 +34,12 @@ nav div {
   padding-inline: 1.5rem;
   background-color: #ffdf7f;
   border-radius: 80px;
-  min-width: 150px;
+  min-width: 45%;
 }
 nav .header-shop-button {
   font-size: 2rem;
   padding: 2rem 3rem;
-  min-width: 300px;
+  min-width: 70%;
   margin-inline: 2rem;
 }
 .header-shop-button img {
