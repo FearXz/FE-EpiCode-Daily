@@ -12,14 +12,15 @@ main {
 main div {
   height: 200px;
   width: 200px;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 10px black;
+  transition: all 0.3s;
 }
+
 main div h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -27,8 +28,18 @@ main div h2 {
 main div p {
   font-size: 1.5rem;
 }
-
+.task1:hover,
+.task2:hover,
+.task3:hover,
+.task4:hover,
+.task5:hover,
+.task6:hover,
+.task7:hover,
+.task8:hover {
+  transform: rotate(0deg) scale(1.5);
+}
 .task1 {
+  animation: slamEffect1 1s 0.1s cubic-bezier(1, -0.07, 0.28, 1.26) backwards;
   transform: rotate(-8deg);
   background: rgb(246, 246, 196);
   background: linear-gradient(
@@ -38,6 +49,7 @@ main div p {
     rgba(135, 135, 106, 1) 100%
   );
 }
+
 .task2 {
   transform: rotate(8deg);
   background: rgb(200, 248, 201);
@@ -47,6 +59,7 @@ main div p {
     rgba(169, 215, 170, 1) 69%,
     rgba(108, 138, 109, 1) 100%
   );
+  animation: slamEffect2 1s 0.2s cubic-bezier(1, -0.07, 0.28, 1.26) backwards;
 }
 .task3 {
   transform: rotate(-10deg);
@@ -57,6 +70,7 @@ main div p {
     rgba(173, 171, 216, 1) 69%,
     rgba(110, 108, 138, 1) 100%
   );
+  animation: slamEffect3 1s 0.3s cubic-bezier(1, -0.07, 0.28, 1.26) backwards;
 }
 .task4 {
   transform: rotate(10deg);
@@ -67,6 +81,7 @@ main div p {
     rgba(169, 215, 170, 1) 69%,
     rgba(108, 138, 109, 1) 100%
   );
+  animation: slamEffect4 1s 0.4s cubic-bezier(1, -0.07, 0.28, 1.26) backwards;
 }
 .task5 {
   transform: rotate(-15deg);
@@ -77,6 +92,7 @@ main div p {
     rgba(213, 213, 166, 1) 69%,
     rgba(135, 135, 106, 1) 100%
   );
+  animation: slamEffect5 1s 0.5s cubic-bezier(1, -0.07, 0.28, 1.26) backwards;
 }
 .task6 {
   transform: rotate(-15deg);
@@ -87,6 +103,7 @@ main div p {
     rgba(173, 171, 216, 1) 69%,
     rgba(110, 108, 138, 1) 100%
   );
+  animation: slamEffect6 1s 0.6s cubic-bezier(1, -0.07, 0.28, 1.26) backwards;
 }
 .task7 {
   transform: rotate(20deg);
@@ -97,6 +114,7 @@ main div p {
     rgba(213, 213, 166, 1) 69%,
     rgba(135, 135, 106, 1) 100%
   );
+  animation: slamEffect7 1s 0.7s cubic-bezier(1, -0.07, 0.28, 1.26) backwards;
 }
 .task8 {
   transform: rotate(-5deg);
@@ -107,4 +125,93 @@ main div p {
     rgba(169, 215, 170, 1) 69%,
     rgba(108, 138, 109, 1) 100%
   );
+  animation: slamEffect8 1s 0.8s cubic-bezier(1, -0.07, 0.28, 1.26) backwards;
+}
+@keyframes slamEffect1 {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(-280deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-8deg);
+  }
+}
+@keyframes slamEffect2 {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(300deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(8deg);
+  }
+}
+@keyframes slamEffect3 {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(-320deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-10deg);
+  }
+}
+@keyframes slamEffect4 {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(290deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-10deg);
+  }
+}
+@keyframes slamEffect5 {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(-180deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-15deg);
+  }
+}
+@keyframes slamEffect6 {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(360deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-15deg);
+  }
+}
+@keyframes slamEffect7 {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(220deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(20deg);
+  }
+}
+@keyframes slamEffect8 {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(-500deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-5deg);
+  }
 }
