@@ -1,0 +1,110 @@
+body {
+  background-color: rgb(108, 108, 108);
+  font-family: "Indie Flower";
+}
+main {
+  padding: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  width: 1200px;
+}
+main div {
+  height: 200px;
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 10px black;
+}
+main div h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+main div p {
+  font-size: 1.5rem;
+}
+
+.task1 {
+  transform: rotate(-8deg);
+  background: rgb(246, 246, 196);
+  background: linear-gradient(
+    180deg,
+    rgba(246, 246, 196, 1) 0%,
+    rgba(213, 213, 166, 1) 69%,
+    rgba(135, 135, 106, 1) 100%
+  );
+}
+.task2 {
+  transform: rotate(8deg);
+  background: rgb(200, 248, 201);
+  background: linear-gradient(
+    180deg,
+    rgba(200, 248, 201, 1) 0%,
+    rgba(169, 215, 170, 1) 69%,
+    rgba(108, 138, 109, 1) 100%
+  );
+}
+.task3 {
+  transform: rotate(-10deg);
+  background: rgb(200, 198, 246);
+  background: linear-gradient(
+    180deg,
+    rgba(200, 198, 246, 1) 0%,
+    rgba(173, 171, 216, 1) 69%,
+    rgba(110, 108, 138, 1) 100%
+  );
+}
+.task4 {
+  transform: rotate(10deg);
+  background: rgb(200, 248, 201);
+  background: linear-gradient(
+    180deg,
+    rgba(200, 248, 201, 1) 0%,
+    rgba(169, 215, 170, 1) 69%,
+    rgba(108, 138, 109, 1) 100%
+  );
+}
+.task5 {
+  transform: rotate(-15deg);
+  background: rgb(246, 246, 196);
+  background: linear-gradient(
+    180deg,
+    rgba(246, 246, 196, 1) 0%,
+    rgba(213, 213, 166, 1) 69%,
+    rgba(135, 135, 106, 1) 100%
+  );
+}
+.task6 {
+  transform: rotate(-15deg);
+  background: rgb(200, 198, 246);
+  background: linear-gradient(
+    180deg,
+    rgba(200, 198, 246, 1) 0%,
+    rgba(173, 171, 216, 1) 69%,
+    rgba(110, 108, 138, 1) 100%
+  );
+}
+.task7 {
+  transform: rotate(20deg);
+  background: rgb(246, 246, 196);
+  background: linear-gradient(
+    180deg,
+    rgba(246, 246, 196, 1) 0%,
+    rgba(213, 213, 166, 1) 69%,
+    rgba(135, 135, 106, 1) 100%
+  );
+}
+.task8 {
+  transform: rotate(-5deg);
+  background: rgb(200, 248, 201);
+  background: linear-gradient(
+    180deg,
+    rgba(200, 248, 201, 1) 0%,
+    rgba(169, 215, 170, 1) 69%,
+    rgba(108, 138, 109, 1) 100%
+  );
+}
