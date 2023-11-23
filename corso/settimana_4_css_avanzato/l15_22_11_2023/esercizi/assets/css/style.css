@@ -188,7 +188,7 @@ span {
 
 @media screen and (min-width: 766px) {
   body {
-    overflow: auto;
+    overflow: hidden;
     display: flex;
   }
   nav {
