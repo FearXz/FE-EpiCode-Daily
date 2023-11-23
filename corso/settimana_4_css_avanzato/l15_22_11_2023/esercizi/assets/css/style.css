@@ -154,6 +154,7 @@ span {
     font-size: 2rem;
     padding: 1.5rem 1rem;
     min-width: unset;
+    margin: 0;
   }
   main {
     flex-direction: row;
