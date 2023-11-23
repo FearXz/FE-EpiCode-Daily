@@ -23,7 +23,7 @@ nav {
   min-width: 360px;
   margin-block-end: 50px;
   font-weight: 600;
-  gap: 10px;
+  gap: 15.8px;
 }
 
 nav div {
@@ -34,12 +34,13 @@ nav div {
   padding-inline: 1.5rem;
   background-color: #ffdf7f;
   border-radius: 80px;
-  min-width: 110px;
+  min-width: 150px;
 }
 nav .header-shop-button {
   font-size: 2rem;
   padding: 2rem 3rem;
-  min-width: 230px;
+  min-width: 300px;
+  margin-inline: 2rem;
 }
 .header-shop-button img {
   max-width: 30px;
