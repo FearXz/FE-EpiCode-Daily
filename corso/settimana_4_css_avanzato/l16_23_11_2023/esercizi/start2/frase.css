@@ -40,7 +40,7 @@ i {
 }
 .parole i:nth-child(3) {
   animation: slideShow 4s linear infinite;
-  animation-delay: 2.65s;
+  animation-delay: 2.66s;
 }
 @keyframes slideShow {
   0% {
