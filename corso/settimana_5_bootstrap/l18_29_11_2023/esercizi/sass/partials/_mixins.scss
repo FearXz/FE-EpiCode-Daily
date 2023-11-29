@@ -1,5 +1,5 @@
-@mixin floating() {
+@mixin floating($color: white) {
   border-radius: 20px;
-  border: 2px solid black;
-  box-shadow: 3px 3px 10px black;
+  border: 2px solid $color;
+  box-shadow: 3px 3px 10px $color;
 }

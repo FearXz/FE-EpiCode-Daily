@@ -45,6 +45,7 @@ body {
       align-items: center;
       border-radius: 50px;
       margin-bottom: 1rem;
+
       .container-text-hero {
         width: 50%;
         p {
@@ -57,7 +58,7 @@ body {
           width: 100%;
           border-radius: 50px;
           object-fit: cover;
-          @include floating;
+          @include floating(black);
         }
       }
     }
