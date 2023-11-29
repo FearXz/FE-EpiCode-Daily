@@ -9,5 +9,9 @@
   .button-#{$color} {
     @extend .btn;
     background-color: $value;
+
+    &:hover {
+      background-color: scale-color($value, $lightness: 25%);
+    }
   }
 }

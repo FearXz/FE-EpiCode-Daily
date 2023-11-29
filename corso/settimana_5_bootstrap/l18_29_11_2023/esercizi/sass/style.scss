@@ -16,9 +16,11 @@ body {
   padding-inline: 5%;
   header {
     nav {
-      background-color: lightslategray;
+      background-color: $navColor;
       display: flex;
       align-items: center;
+      border-radius: 20px;
+      margin-bottom: 1rem;
 
       .logo {
         padding-inline-end: 1rem;
@@ -41,6 +43,8 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 50px;
+      margin-bottom: 1rem;
       .container-text-hero {
         width: 50%;
         p {
@@ -53,6 +57,7 @@ body {
           width: 100%;
           border-radius: 50px;
           object-fit: cover;
+          @include floating;
         }
       }
     }
@@ -64,6 +69,7 @@ body {
         width: 25%;
         img {
           max-width: 100%;
+          @include floating;
         }
       }
     }
