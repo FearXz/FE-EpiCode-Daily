@@ -1,0 +1,42 @@
+// selettori vuoti non verranno compilati nella versione finale
+// section {
+// }
+
+main {
+  padding-inline: 3rem;
+  section {
+    //parent selector ==> &
+
+    h1 {
+      color: $main-color;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: lightgreen;
+      }
+    }
+
+    div {
+      // &:nth-of-type(2) {
+      // }
+      // &:nth-of-type(3) {
+      // }
+      // &:nth-of-type(4) {
+      // }
+
+      ul {
+        li {
+          color: blue;
+
+          //parent selector ==> &
+          &::marker {
+            content: "🤩🥶";
+          }
+        }
+      }
+    }
+  }
+}
+// questo si compilerà in questo modo:
+// main section h1 {
+// }

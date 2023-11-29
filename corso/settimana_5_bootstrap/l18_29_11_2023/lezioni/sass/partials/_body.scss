@@ -1,0 +1,12 @@
+// 2) NESTING - Selettori annidati (o nidificati)
+body {
+  margin: 0;
+
+  // creazione di proprietà composte
+  font: {
+    family: $main-font;
+    weight: 400;
+    size: 1rem;
+    style: normal;
+  }
+}

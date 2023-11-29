@@ -1,0 +1,37 @@
+@mixin myBox($mainColor: lightgray, $borderColor: gray, $textColor: black, $radius: 10px) {
+  // parametro: defaultValue
+  // un parametro senza default dovrà ricevere per forza un valore, altrimenti SASS darà un errore di compilazione
+  // quando un parametro specifica un default si può omettere di passargli un valore. lui acquisirà il valore specificato come default in quel caso
+  width: 200px;
+  height: 200px;
+  margin-block: 2rem;
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: $radius;
+  border: 2px solid $borderColor;
+  color: $textColor;
+  background-color: $mainColor;
+  box-shadow: 0 3px 30px scale-color($mainColor, $blackness: 30%);
+}
+
+@mixin dynamicSquare($size, $val, $propertyName) {
+  width: $size;
+  height: $size;
+  margin-block: 2rem;
+  vertical-align: bottom;
+
+  border: 2px solid lightcoral;
+  color: black;
+  // interpolazione di valore #{}
+  background-#{$propertyName}: $val;
+
+  @if ($propertyName == "image") {
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } @else {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
