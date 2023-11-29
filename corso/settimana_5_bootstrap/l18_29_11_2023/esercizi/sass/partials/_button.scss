@@ -5,13 +5,14 @@
   border-radius: 10px;
 }
 
-@each $color, $value in $buttonColor {
-  .button-#{$color} {
+@each $colorName, $value in $buttonColor {
+  .button-#{"" + $colorName} {
     @extend .btn;
     background-color: $value;
+    transition: all 0.3s;
 
     &:hover {
-      background-color: scale-color($value, $lightness: 25%);
+      background-color: scale-color($value, $lightness: 50%);
     }
   }
 }

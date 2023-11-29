@@ -1,6 +1,7 @@
 @import "./partials/reset";
 @import "./partials/variables";
 @import "./partials/mixins";
+@import "./partials/animation";
 @import "./partials/fonts";
 @import "./partials/spacings";
 @import "./partials/button";
@@ -12,7 +13,9 @@
 .bg-hero {
   background-color: $bgHero;
 }
+
 body {
+  font-family: $fontFamily;
   padding-inline: 5%;
   header {
     nav {
@@ -24,10 +27,10 @@ body {
 
       .logo {
         padding-inline-end: 1rem;
+        max-width: 70px;
         img {
           border-radius: 50%;
-          max-height: 50px;
-          width: 100%;
+          max-width: 100%;
           object-fit: cover;
         }
       }
@@ -47,6 +50,7 @@ body {
       margin-bottom: 1rem;
 
       .container-text-hero {
+        @include fadeIn(1s, 0s);
         width: 50%;
         p {
           line-height: 30px;
@@ -54,11 +58,12 @@ body {
         }
       }
       .container-img-hero {
+        @include fadeIn(1s, 0.5s);
         img {
           width: 100%;
           border-radius: 50px;
           object-fit: cover;
-          @include floating(black);
+          @include floating();
         }
       }
     }
@@ -70,7 +75,7 @@ body {
         width: 25%;
         img {
           max-width: 100%;
-          @include floating;
+          @include floating(none, black);
         }
       }
     }

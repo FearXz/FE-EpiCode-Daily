@@ -128,6 +128,18 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+@keyframes fadeIn {
+  0% {
+    /* translate: 0px 50px;*/
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    /*translate: 0px 0px;*/
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .font-size-1 {
   color: #f4f4f4;
   font-size: 0.2rem;
@@ -228,12 +240,20 @@ body {
   font-size: 4rem;
 }
 
+.p-1 {
+  padding: 0.2rem;
+}
+
 .px-1 {
   padding-inline: 0.2rem;
 }
 
 .py-1 {
   padding-block: 0.2rem;
+}
+
+.p-2 {
+  padding: 0.4rem;
 }
 
 .px-2 {
@@ -244,12 +264,20 @@ body {
   padding-block: 0.4rem;
 }
 
+.p-3 {
+  padding: 0.6rem;
+}
+
 .px-3 {
   padding-inline: 0.6rem;
 }
 
 .py-3 {
   padding-block: 0.6rem;
+}
+
+.p-4 {
+  padding: 0.8rem;
 }
 
 .px-4 {
@@ -260,12 +288,20 @@ body {
   padding-block: 0.8rem;
 }
 
+.p-5 {
+  padding: 1rem;
+}
+
 .px-5 {
   padding-inline: 1rem;
 }
 
 .py-5 {
   padding-block: 1rem;
+}
+
+.p-6 {
+  padding: 1.2rem;
 }
 
 .px-6 {
@@ -276,12 +312,20 @@ body {
   padding-block: 1.2rem;
 }
 
+.p-7 {
+  padding: 1.4rem;
+}
+
 .px-7 {
   padding-inline: 1.4rem;
 }
 
 .py-7 {
   padding-block: 1.4rem;
+}
+
+.p-8 {
+  padding: 1.6rem;
 }
 
 .px-8 {
@@ -292,12 +336,20 @@ body {
   padding-block: 1.6rem;
 }
 
+.p-9 {
+  padding: 1.8rem;
+}
+
 .px-9 {
   padding-inline: 1.8rem;
 }
 
 .py-9 {
   padding-block: 1.8rem;
+}
+
+.p-10 {
+  padding: 2rem;
 }
 
 .px-10 {
@@ -397,23 +449,26 @@ body {
 
 .button-blue {
   background-color: #0e6cff;
+  transition: all 0.3s;
 }
 .button-blue:hover {
-  background-color: #4a91ff;
+  background-color: #87b6ff;
 }
 
 .button-orange {
   background-color: #ff8700;
+  transition: all 0.3s;
 }
 .button-orange:hover {
-  background-color: #ffa540;
+  background-color: #ffc380;
 }
 
 .button-green {
   background-color: #4caf50;
+  transition: all 0.3s;
 }
 .button-green:hover {
-  background-color: #78c47b;
+  background-color: #a5d8a7;
 }
 
 .flex {
@@ -426,6 +481,7 @@ body {
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   padding-inline: 5%;
 }
 body header nav {
@@ -437,11 +493,11 @@ body header nav {
 }
 body header nav .logo {
   padding-inline-end: 1rem;
+  max-width: 70px;
 }
 body header nav .logo img {
   border-radius: 50%;
-  max-height: 50px;
-  width: 100%;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -458,11 +514,15 @@ body main .hero {
   margin-bottom: 1rem;
 }
 body main .hero .container-text-hero {
+  animation: fadeIn 1s 0s backwards;
   width: 50%;
 }
 body main .hero .container-text-hero p {
   line-height: 30px;
   margin-bottom: 1rem;
+}
+body main .hero .container-img-hero {
+  animation: fadeIn 1s 0.5s backwards;
 }
 body main .hero .container-img-hero img {
   width: 100%;
@@ -470,8 +530,8 @@ body main .hero .container-img-hero img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
-  border: 2px solid black;
-  box-shadow: 3px 3px 10px black;
+  border: 1px solid white;
+  box-shadow: 3px 3px 10px white;
 }
 body main section {
   display: flex;
@@ -483,6 +543,6 @@ body main section .container-img {
 body main section .container-img img {
   max-width: 100%;
   border-radius: 20px;
-  border: 2px solid white;
-  box-shadow: 3px 3px 10px white;
+  border: none;
+  box-shadow: 3px 3px 10px black;
 }/*# sourceMappingURL=style.css.map */
