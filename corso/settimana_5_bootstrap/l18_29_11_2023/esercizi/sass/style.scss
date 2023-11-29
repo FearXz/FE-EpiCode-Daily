@@ -73,6 +73,7 @@ body {
         img {
           width: 100%;
           max-width: 500px;
+          font-size: 0px;
           @include floating(none, black);
         }
       }

@@ -10,8 +10,10 @@
   align-items: center;
 
   > * {
-    padding: 0.5rem;
-    width: calc(100% / $nItem)-$nItem;
+    padding-inline: 0.25rem;
+    padding-block: 0.5rem;
+    $cento: 100%-$nItem;
+    width: calc($cento / $nItem)-0.5;
     display: flex;
     justify-content: center;
     align-items: center;

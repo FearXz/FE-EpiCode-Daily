@@ -552,8 +552,9 @@ body main section {
   align-items: center;
 }
 body main section > * {
-  padding: 0.5rem;
-  width: 21%;
+  padding-inline: 0.25rem;
+  padding-block: 0.5rem;
+  width: 23.5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -561,6 +562,7 @@ body main section > * {
 body main section .container-img img {
   width: 100%;
   max-width: 500px;
+  font-size: 0px;
   border-radius: 20px;
   border: none;
   box-shadow: 3px 3px 10px black;
