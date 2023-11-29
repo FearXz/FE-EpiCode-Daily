@@ -1,16 +1,16 @@
-@keyframes fadeIn {
-  0% {
-    /* translate: 0px 50px;*/
-    opacity: 0;
-    transform: translateY(-100px);
-  }
+@mixin fadeIn($nome, $seconds, $delay) {
+  @keyframes #{$nome} {
+    0% {
+      /* translate: 0px 50px;*/
+      opacity: 0;
+      transform: translateY(-100px);
+    }
 
-  100% {
-    /*translate: 0px 0px;*/
-    opacity: 1;
-    transform: translateY(0px);
+    100% {
+      /*translate: 0px 0px;*/
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
-}
-@mixin fadeIn($seconds, $delay) {
-  animation: fadeIn $seconds $delay backwards;
+  animation: $nome $seconds $delay backwards;
 }

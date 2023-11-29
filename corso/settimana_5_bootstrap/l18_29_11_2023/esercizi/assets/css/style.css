@@ -128,18 +128,6 @@ body {
   -webkit-text-size-adjust: none;
 }
 
-@keyframes fadeIn {
-  0% {
-    /* translate: 0px 50px;*/
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  100% {
-    /*translate: 0px 0px;*/
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 .font-size-1 {
   color: #f4f4f4;
   font-size: 0.2rem;
@@ -514,15 +502,39 @@ body main .hero {
   margin-bottom: 1rem;
 }
 body main .hero .container-text-hero {
-  animation: fadeIn 1s 0s backwards;
+  animation: fadeInText 1s 0.5s backwards;
   width: 50%;
+}
+@keyframes fadeInText {
+  0% {
+    /* translate: 0px 50px;*/
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    /*translate: 0px 0px;*/
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 body main .hero .container-text-hero p {
   line-height: 30px;
   margin-bottom: 1rem;
 }
 body main .hero .container-img-hero {
-  animation: fadeIn 1s 0.5s backwards;
+  animation: fadeInImg 1s 1s backwards;
+}
+@keyframes fadeInImg {
+  0% {
+    /* translate: 0px 50px;*/
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    /*translate: 0px 0px;*/
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 body main .hero .container-img-hero img {
   width: 100%;
