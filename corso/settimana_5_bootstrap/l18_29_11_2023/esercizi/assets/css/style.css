@@ -507,14 +507,14 @@ body main .hero .container-text-hero {
 }
 @keyframes fadeInText {
   0% {
-    /* translate: 0px 50px;*/
+    translate: 0px -100px;
     opacity: 0;
-    transform: translateY(-100px);
+    /*  transform: translateY(-100px);*/
   }
   100% {
-    /*translate: 0px 0px;*/
+    translate: 0px 0px;
     opacity: 1;
-    transform: translateY(0px);
+    /* transform: translateY(0px);*/
   }
 }
 body main .hero .container-text-hero p {
@@ -526,14 +526,14 @@ body main .hero .container-img-hero {
 }
 @keyframes fadeInImg {
   0% {
-    /* translate: 0px 50px;*/
+    translate: 0px -100px;
     opacity: 0;
-    transform: translateY(-100px);
+    /*  transform: translateY(-100px);*/
   }
   100% {
-    /*translate: 0px 0px;*/
+    translate: 0px 0px;
     opacity: 1;
-    transform: translateY(0px);
+    /* transform: translateY(0px);*/
   }
 }
 body main .hero .container-img-hero img {
