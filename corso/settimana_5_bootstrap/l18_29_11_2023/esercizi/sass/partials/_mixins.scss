@@ -3,3 +3,17 @@
   border: $border;
   box-shadow: 3px 3px 10px $color;
 }
+@mixin grid($nItem) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  > * {
+    padding: 0.5rem;
+    width: calc(100% / $nItem)-$nItem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

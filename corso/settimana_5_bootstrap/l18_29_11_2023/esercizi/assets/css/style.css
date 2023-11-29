@@ -546,11 +546,22 @@ body main .hero .container-img-hero img {
   box-shadow: 3px 3px 10px white;
 }
 body main section {
+  /*display: flex;
+  gap: 10px;*/
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body main section > * {
+  padding: 0.5rem;
+  width: 30.3333333333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body main section .container-img {
-  width: 25%;
+  /* width: 25%;*/
 }
 body main section .container-img img {
   max-width: 100%;

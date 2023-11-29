@@ -68,11 +68,12 @@ body {
       }
     }
     section {
-      display: flex;
-      gap: 10px;
+      /*display: flex;
+      gap: 10px;*/
+      @include grid(3);
 
       .container-img {
-        width: 25%;
+        /* width: 25%;*/
         img {
           max-width: 100%;
           @include floating(none, black);
