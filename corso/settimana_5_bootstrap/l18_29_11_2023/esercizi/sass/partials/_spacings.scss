@@ -1,0 +1,17 @@
+@for $i from 1 through 10 {
+  .px-#{$i} {
+    padding-inline: ($i * 0.2rem);
+  }
+  .py-#{$i} {
+    padding-block: ($i * 0.2rem);
+  }
+}
+
+@for $i from 1 through 10 {
+  .mx-#{$i} {
+    margin-inline: ($i * 0.2rem);
+  }
+  .my-#{$i} {
+    margin-block: ($i * 0.2rem);
+  }
+}

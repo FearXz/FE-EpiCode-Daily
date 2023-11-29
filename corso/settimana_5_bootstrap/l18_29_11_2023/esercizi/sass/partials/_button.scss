@@ -1,0 +1,13 @@
+.btn {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+@each $color, $value in $buttonColor {
+  .button-#{$color} {
+    @extend .btn;
+    background-color: $value;
+  }
+}
