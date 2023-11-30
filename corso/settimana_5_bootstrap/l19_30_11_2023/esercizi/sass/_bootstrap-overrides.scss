@@ -2,56 +2,15 @@
 @include bsBanner("");
 
 // scss-docs-start import-stack
-
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// Configuration
 @import "./bootstrap/scss/functions";
-
-// 2. Include any default variable overrides here
-
-// 3. Include remainder of required Bootstrap stylesheets
 @import "./bootstrap/scss/variables";
-
-// 4. Include any default map overrides here
-$custom-theme-colors: (
-  "orange": orange,
-  "gold": gold,
-  "pink": pink,
-);
-
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-  xxxl: 1800px,
-);
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px,
-  xxxl: 1710px,
-);
-$spacers: (
-  0: 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 2,
-  6: $spacer * 2.5,
-  7: $spacer * 3,
-);
-$theme-colors: map-merge($theme-colors, $custom-theme-colors);
-// 5. Include remainder of required parts
+@import "./bootstrap/scss/variables-dark";
 @import "./bootstrap/scss/maps";
 @import "./bootstrap/scss/mixins";
 @import "./bootstrap/scss/utilities";
 
-// 6. Optionally include any other parts as needed
+// Layout & components
 @import "./bootstrap/scss/root";
 @import "./bootstrap/scss/reboot";
 @import "./bootstrap/scss/type";
@@ -87,7 +46,6 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 // Helpers
 @import "./bootstrap/scss/helpers";
 
-// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+// Utilities
 @import "./bootstrap/scss/utilities/api";
-
-// 8. Add additional custom code here
+// scss-docs-end import-stack
