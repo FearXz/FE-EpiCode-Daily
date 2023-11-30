@@ -35,7 +35,16 @@ $container-max-widths: (
   xxl: 1320px,
   xxxl: 1710px,
 );
-
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+);
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 // 5. Include remainder of required parts
 @import "../bootstrap/scss/maps";
