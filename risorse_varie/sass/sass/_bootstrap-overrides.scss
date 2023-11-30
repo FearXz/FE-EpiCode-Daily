@@ -1,0 +1,137 @@
+@import "./bootstrap/scss/mixins/banner";
+@include bsBanner("");
+
+// scss-docs-start import-stack
+// Configuration
+@import "./bootstrap/scss/functions";
+//var qua
+$input-btn-padding-y: 0.75rem;
+$input-btn-padding-x: 2.5rem;
+
+$grid-gutter-width: 0.5rem;
+$danger: #ff0077;
+$info: #00ffea;
+$light: #f3eeff;
+
+$input-border-radius: 99rem;
+$input-border-radius-sm: 99rem;
+$input-border-radius-lg: 99rem;
+
+$btn-border-radius: 99rem;
+$btn-border-radius-sm: 99rem;
+$btn-border-radius-lg: 99rem;
+
+$badge-border-radius: 99rem;
+
+@import "./bootstrap/scss/variables";
+//map qua
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "epicode-1": #5726c3,
+  "epicode-2": #8625a5,
+  "epicode-3": #cb2376,
+);
+
+$card-bg: $dark;
+$card-color: $info;
+$card-border-radius: 2rem;
+
+$h7-font-size: $font-size-base * 0.8;
+$h8-font-size: $font-size-base * 0.7;
+$h9-font-size: $font-size-base * 0.6;
+$h10-font-size: $font-size-base * 0.5;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size,
+);
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
+  10: 10px,
+);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  3xl: 1600px,
+  4xl: 1800px,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  3xl: 1520px,
+  4xl: 1720px,
+);
+@import "./bootstrap/scss/variables-dark";
+@import "./bootstrap/scss/maps";
+@import "./bootstrap/scss/mixins";
+@import "./bootstrap/scss/utilities";
+
+// Layout & components
+@import "./bootstrap/scss/root";
+@import "./bootstrap/scss/reboot";
+@import "./bootstrap/scss/type";
+@import "./bootstrap/scss/images";
+@import "./bootstrap/scss/containers";
+@import "./bootstrap/scss/grid";
+@import "./bootstrap/scss/tables";
+@import "./bootstrap/scss/forms";
+@import "./bootstrap/scss/buttons";
+@import "./bootstrap/scss/transitions";
+@import "./bootstrap/scss/dropdown";
+@import "./bootstrap/scss/button-group";
+@import "./bootstrap/scss/nav";
+@import "./bootstrap/scss/navbar";
+@import "./bootstrap/scss/card";
+@import "./bootstrap/scss/accordion";
+@import "./bootstrap/scss/breadcrumb";
+@import "./bootstrap/scss/pagination";
+@import "./bootstrap/scss/badge";
+@import "./bootstrap/scss/alert";
+@import "./bootstrap/scss/progress";
+@import "./bootstrap/scss/list-group";
+@import "./bootstrap/scss/close";
+@import "./bootstrap/scss/toasts";
+@import "./bootstrap/scss/modal";
+@import "./bootstrap/scss/tooltip";
+@import "./bootstrap/scss/popover";
+@import "./bootstrap/scss/carousel";
+@import "./bootstrap/scss/spinners";
+@import "./bootstrap/scss/offcanvas";
+@import "./bootstrap/scss/placeholders";
+
+// Helpers
+@import "./bootstrap/scss/helpers";
+
+// Utilities
+@import "./bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
