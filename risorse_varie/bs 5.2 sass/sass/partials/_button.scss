@@ -1,0 +1,18 @@
+.btn {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+@each $colorName, $value in $buttonColor {
+  .button-#{"" + $colorName} {
+    @extend .btn;
+    background-color: $value;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: scale-color($value, $lightness: 50%);
+    }
+  }
+}
