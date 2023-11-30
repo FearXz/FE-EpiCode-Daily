@@ -12,7 +12,31 @@
 @import "../bootstrap/scss/variables";
 
 // 4. Include any default map overrides here
+$custom-theme-colors: (
+  "orange": orange,
+  "gold": gold,
+  "pink": pink,
+);
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1800px,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1710px,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
 // 5. Include remainder of required parts
 @import "../bootstrap/scss/maps";
 @import "../bootstrap/scss/mixins";
