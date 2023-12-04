@@ -1,38 +1,38 @@
+window.onload = function () {
+  let form = document.querySelector("form");
+  form.addEventListener("submit", createNewTaskComponent);
+};
 
-const handleSubmit = function (event) {
-    event.preventDefault()   // evita il comportamento di default 
-    addTask()
-    attachComplete()
-    attachDelete()
-}
+const createNewTaskComponent = function (event) {
+  event.preventDefault(); // evita il comportamento di default
+  addTask();
+  signCompletedTask();
+  addEventListenerDelete();
+};
 
 const addTask = function () {
-    let inputField = document.querySelector('#newTask input');
-    let divContainer = document.querySelector('#tasks');
-    let newTask = `<div class="task" ><p>${inputField.value}</p><button class="remove">Delete</button></div>`
-    divContainer.innerHTML += newTask;
-}
+  let inputField = document.querySelector("#newTask input");
+  let divContainer = document.querySelector("#tasks");
+  let newTask = `<div class="task" ><p>${inputField.value}</p><button class="remove">Delete</button></div>`;
+  divContainer.innerHTML += newTask;
+};
 
-const attachComplete = function () {
+const signCompletedTask = function () {
+  let allTask = document.querySelectorAll(".task");
 
-    let allTask = document.querySelectorAll('.task');
+  for (let i = 0; i < allTask.length; i++) {
+    allTask[i].addEventListener("click", function () {
+      this.classList.toggle("line");
+    });
+  }
+};
 
-    for (let i = 0; i < allTask.length; i++) {
+const addEventListenerDelete = function () {
+  let allButton = document.querySelectorAll(".remove");
 
-        allTask[i].addEventListener('click', function () { this.classList.toggle('line') })
-    }
-}
-
-const attachDelete = function () {
-    let allButton = document.querySelectorAll('.remove');
-
-    for (let i = 0; i < allButton.length; i++) {
-
-        allButton[i].addEventListener('click', function () { this.parentNode.remove() })
-    }
-}
-
-window.onload = function () {
-    let form = document.querySelector('form')
-    form.addEventListener('submit', handleSubmit)
-}
+  for (let i = 0; i < allButton.length; i++) {
+    allButton[i].addEventListener("click", function () {
+      this.parentNode.remove();
+    });
+  }
+};
