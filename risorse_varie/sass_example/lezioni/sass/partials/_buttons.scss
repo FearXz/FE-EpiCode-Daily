@@ -1,0 +1,40 @@
+.btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+
+  // 3) Parent Selector (&) - permette di riferirsi al genitore in questo contesto, senza ripetere il suo nome più volte
+  &-primary {
+    // background-color: lighten($main-color, 30%);
+    background-color: scale-color($main-color, $lightness: 50%);
+    border-color: $main-color;
+    color: scale-color($main-color, $lightness: -60%);
+  }
+  &-success {
+    background-color: scale-color($success-color, $lightness: 50%);
+    border-color: $success-color;
+    color: scale-color($success-color, $lightness: -60%);
+  }
+  &-warning {
+    background-color: scale-color($warning-color, $lightness: 50%);
+    border-color: $warning-color;
+    color: scale-color($warning-color, $lightness: -60%);
+  }
+  &-danger {
+    background-color: scale-color($danger-color, $lightness: 50%);
+    border-color: $danger-color;
+    color: scale-color($danger-color, $lightness: -60%);
+  }
+
+  // media queries annidate nel selettore
+  @media screen and (min-width: 768px) {
+    padding: 0.5rem 1.5rem;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 1rem 3rem;
+  }
+}

@@ -1,0 +1,123 @@
+// 1) variabili  SCSS
+// 2) NESTING - Selettori annidati (o nidificati)
+@import "./partials/variables";
+@import "./partials/body";
+@import "./partials/main";
+// 3) Parent Selector (&) - permette di riferirsi al genitore in questo contesto, senza ripetere il suo nome più volte
+@import "./partials/buttons";
+@import "./partials/mixins";
+
+// 4) EXTEND (@extend) - è in grado di riprendere tutto un blocco precedente di una classe / id / elemento
+.btn-alt {
+  @extend .btn;
+
+  padding: 1rem;
+  border-width: 2px;
+  border-radius: 10px;
+  background-color: palegoldenrod;
+  border-color: rgb(168, 154, 0);
+  color: rgb(33, 31, 1);
+}
+
+// 5) PLACEHOLDER (%)- serve ad incorporare un blocco CSS che rispetto ad estendere da selettori esistenti, questo non esisterà di per sé
+// ci permette di dichiarare dei blocchi di regole css e richiamarli all'occorrenza in selettori che verranno poi generati nel css finale
+
+%reset-btn {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+%reset-font {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.btn-basic {
+  @extend %reset-btn, %reset-font;
+}
+
+// 6) MIXINS - un blocco di codice CSS che può generarsi anche con valori (o parametri) dinamici
+
+.box-1 {
+  @include myBox(darkblue, darkcyan, paleturquoise, 10px);
+}
+.box-2 {
+  @include myBox(crimson, coral, palegoldenrod, 30px);
+}
+.box-3 {
+  @include myBox(); // internamente al mixin verranno usati i valori di default
+}
+.box-4 {
+  @include myBox($radius: 60px, $borderColor: rgb(148, 140, 240));
+  // internamente al mixin verranno usati i valori di default,
+  //tranne per i due che abbiamo passato richiamando il nome della variabile di parametro
+  // in questo modo possiamo anche passare i parametri in ordine sparso
+}
+
+.box-5 {
+  @include dynamicSquare(
+    300px,
+    url("https://plus.unsplash.com/premium_photo-1700838996452-9e83d1f2c514?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
+    "image"
+  );
+}
+
+.box-6 {
+  @include dynamicSquare(300px, darkcyan, "color");
+}
+
+// 9) CICLI
+
+// CICLO FOR
+
+// @for $contatore from 0 to 5  ==> dove <start> to <end> "to" rappresenta il valore con <end> ESCLUSO, come un <
+// @for $contatore from 0 through 5  ==> dove <start> through <end> "through" rappresenta il valore con <end> INCLUSO, come un <=
+
+@for $i from 1 through 5 {
+  .custom-padding-#{$i} {
+    padding: $i * 10px;
+  }
+}
+
+// CICLO EACH
+
+// @each $elem in red, green, blue, yellow, purple, orange {
+//   .square-#{$elem} {
+//     background-color: $elem;
+//   }
+// }
+
+// datatype List
+$colorKeys: red, green, blue, yellow, purple, orange;
+
+@each $elem in $colorKeys {
+  .square-#{$elem} {
+    background-color: $elem;
+  }
+}
+
+// datatype Map
+
+$sizes: (
+  xs: 10px,
+  sm: 20px,
+  md: 30px,
+  lg: 60px,
+  xl: 120px,
+  xxl: 200px
+);
+
+@each $key, $val in $sizes {
+  .padding-#{$key} {
+    padding: $val;
+
+    &-inline {
+      padding-inline: $val;
+    }
+    &-block {
+      padding-block: $val;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "./partials/reset";
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/animation";
+@import "./partials/fonts";
+@import "./partials/spacings";
+@import "./partials/button";
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
+.bg-hero {
+  background-color: $bgHero;
+}
+
+body {
+  font-family: $fontFamily;
+  padding-inline: 5%;
+  header {
+    nav {
+      background-color: $navColor;
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+
+      .logo {
+        padding-inline-end: 1rem;
+        max-width: 70px;
+        img {
+          border-radius: 50%;
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
+      }
+    }
+  }
+  main {
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+
+      .container-text-hero {
+        @include fadeIn(fadeInText, 1s, 0.5s);
+        width: 50%;
+        p {
+          line-height: 30px;
+          margin-bottom: 1rem;
+        }
+      }
+      .container-img-hero {
+        @include fadeIn(fadeInImg, 1s, 1s);
+        img {
+          width: 100%;
+          border-radius: 50px;
+          object-fit: cover;
+          @include floating();
+        }
+      }
+    }
+    section {
+      @include grid(4);
+      .container-img {
+        img {
+          width: 100%;
+          max-width: 500px;
+          font-size: 0px;
+          @include floating(none, black);
+        }
+      }
+    }
+  }
+}
