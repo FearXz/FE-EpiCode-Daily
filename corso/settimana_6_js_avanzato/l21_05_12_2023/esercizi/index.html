@@ -11,44 +11,44 @@
     <main>
       <div class="container mt-5 bg-azure">
         <div class="row justify-content-center p-5">
-          <div class="col-12  col-lg-10 ">
+          <div class="col-12 col-lg-10">
             <form>
-            <div class="row">  
+              <div class="row">
                 <div class="col-6">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Pet Name" />
-                    <label for="floatingInput">Pet Name</label>
+                    <input type="text" class="form-control" id="petName" placeholder="Pet Name" required />
+                    <label for="petName">Pet Name</label>
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Pet Owner" />
-                    <label for="floatingInput">Pet Owner</label>
+                    <input type="text" class="form-control" id="petOwner" placeholder="Pet Owner" required />
+                    <label for="petOwner">Pet Owner</label>
                   </div>
                 </div>
                 <div class="col-6 d-flex gap-1">
-                    <div>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Select a pet</option>
-                            <option value="1">cat</option>
-                            <option value="2">dog</option>
-                          </select>
-                    </div>
-                    <div>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Pls select a pet first</option>
-
-                          </select>
-                    </div>
+                  <div>
+                    <select id="species" class="form-select" aria-label="Default select example">
+                      <option selected>Select a pet</option>
+                    </select>
+                  </div>
+                  <div>
+                    <select id="breed" class="form-select" aria-label="Default select example">
+                      <option selected>Pls select a pet first</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="col-6">
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary px-5">Register</button>
-                    </div>
-                    
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary px-5">Register</button>
+                  </div>
                 </div>
-                <div id="registeredPet" class="col-12 bg-teal text-light"></div>
-              </form>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col-12">
+                <div id="registeredPet" class="col-12 text-light mt-3"></div>
+              </div>
             </div>
           </div>
         </div>
