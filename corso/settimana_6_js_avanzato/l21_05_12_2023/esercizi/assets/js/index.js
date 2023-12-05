@@ -24,6 +24,7 @@ let registeredPet = [];
 let animals = {
   cat: ["oriental", "devon", "british"],
   dog: ["beagle", "cocker", "shitzu"],
+  crocodile: ["american", "australian"],
 };
 
 let handleSubmit = (event) => {
