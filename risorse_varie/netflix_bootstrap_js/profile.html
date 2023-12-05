@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <title>Profile</title>
+  </head>
+  <body class="bg-darkgray" data-bs-theme="dark">
+    <header class="mb-5">
+      <div class="container-fluid bg-custom1">
+        <a href="index.html"> <img class="logo-profile" src="assets/img/netflix_logo.png" alt="" /></a>
+      </div>
+    </header>
+    <main>
+      <div class="container d-flex justify-content-center">
+        <div class="row w-100 justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+            <div class="row w-100">
+              <div class="col-12">
+                <h1 class="display-3 fw-normal">Edit Profile</h1>
+                <hr />
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-4 d-flex justify-content-center">
+                    <div class="avatar-profile position-relative mb-auto">
+                      <img class="img-fluid" src="assets/img/avatar.png" alt="" />
+
+                      <i
+                        class="bi bi-pencil-fill fs-7 position-absolute bottom-0 start-0 bg-darkgray rounded-circle px-2 py-1 mb-1 ms-1 border border-1 border-light"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="bg-somegray border-1 p-1 mb-3">
+                      <p class="m-0 fs-5 fw-semibold">Strive Student</p>
+                    </div>
+                    <div>
+                      <p class="fs-5 mb-1 text-body-secondary">language:</p>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-outline-light rounded-0 dropdown-toggle px-4 fs-7"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          English
+                        </button>
+                        <ul class="dropdown-menu rounded-0 bg-body-secondary">
+                          <li><a class="dropdown-item" href="#">Italian</a></li>
+                          <li><a class="dropdown-item" href="#">Deutch</a></li>
+                          <li><a class="dropdown-item" href="#">Chinese</a></li>
+                        </ul>
+                      </div>
+                      <hr />
+                    </div>
+                    <div class="mb-3">
+                      <p class="fs-5 text-body-secondary">Maturity Setting</p>
+                    </div>
+                    <div class="mb-3">
+                      <span class="m-0 fs-6 fw-semibold bg-body-secondary p-2">ALL MATURITY SETTINGS</span>
+                    </div>
+                    <div class="mb-3">
+                      <p class="fs-6">Show title of all maturity rating for this profile.</p>
+                    </div>
+                    <div class="mb-3">
+                      <button class="btn rounded-0 btn-outline-secondary btn-sm ls-2">
+                        <span class="fs-6 px-1">EDIT</span>
+                      </button>
+                    </div>
+                    <hr />
+                    <div class="mb-3">
+                      <p class="fs-5 text-body-secondary">Autoplay controls</p>
+                    </div>
+                    <div id="check-container">
+                      <label class="checkbox-wrapper d-flex align-items-center">
+                        <div>
+                          <input id="checkbox1" type="checkbox" />
+                          <span class="checkmark"></span>
+                        </div>
+                        <p class="fs-7">Autoplay next episode in a series on all devices.</p>
+                      </label>
+                      <label class="checkbox-wrapper d-flex align-items-center">
+                        <div>
+                          <input id="checkbox2" type="checkbox" />
+                          <span class="checkmark"></span>
+                        </div>
+                        <p class="fs-7">Autoplay preview while browsing on all devices.</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div class="col-12">
+                <div class="d-flex justify-content-center gap-4">
+                  <button class="btn rounded-0 btn-outline-secondary btn-lg ls-3">
+                    <span class="fs-5 px-1">SAVE</span>
+                  </button>
+                  <button class="btn rounded-0 btn-outline-secondary btn-lg ls-3">
+                    <span class="fs-5 px-1">CANCEL</span>
+                  </button>
+                  <button class="btn rounded-0 btn-outline-secondary btn-lg ls-3">
+                    <span class="fs-5 px-1"> DELETE PROFILE</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
