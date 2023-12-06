@@ -10,6 +10,7 @@ window.onload = function () {
     });
 };
 let cartArray = [];
+let counter = 0;
 
 let refreshLibrary = function (arrayOfBook) {
   let bookContainer = document.getElementById("bookContainer");
@@ -66,6 +67,9 @@ let createCard = function (bookObj, index, arrayOfBook) {
     cartArray.push(arrayOfBook[index]);
     console.log(cartArray);
     localStorage.setItem("LibraryCart", JSON.stringify(cartArray));
+    counter += 1;
+    let span = document.getElementById("counter");
+    span.innerText = counter;
     refreshCart();
   });
 
@@ -97,23 +101,30 @@ let createCard = function (bookObj, index, arrayOfBook) {
 };
 
 let refreshCart = () => {
-  let cartContainer = document.getElementById("cart");
+  let dropDownMenu = document.querySelector(".dropdown-menu");
   let arrayCart = JSON.parse(localStorage.getItem("LibraryCart"));
-  clearElement(cartContainer);
+  clearElement(dropDownMenu);
   let total = 0;
 
   arrayCart.forEach((bookInCart, index) => {
     total += bookInCart.price;
-    let itemDivRow = createCartElement(bookInCart, index);
-    cartContainer.appendChild(itemDivRow);
+    let itemLi = createCartElement(bookInCart, index);
+    dropDownMenu.appendChild(itemLi);
   });
 
   let totalDiv = document.createElement("div");
   totalDiv.textContent = `total = ${parseFloat(total.toFixed(2))}`;
-  cartContainer.appendChild(totalDiv);
+  dropDownMenu.appendChild(totalDiv);
 };
 
 let createCartElement = function (bookInCart, index) {
+  let li = document.createElement("li");
+
+  let a = document.createElement("a");
+
+  a.href = "#";
+  a.classList.add("dropdown-item");
+
   let rowDiv = document.createElement("div");
   rowDiv.classList.add("row", "justify-content-start");
 
@@ -150,6 +161,9 @@ let createCartElement = function (bookInCart, index) {
     event.currentTarget.closest(".row").remove();
     console.log(cartArray.splice(index, 1));
     localStorage.setItem("LibraryCart", JSON.stringify(cartArray));
+    counter -= 1;
+    let span = document.getElementById("counter");
+    span.innerText = counter;
     refreshCart();
     console.log(cartArray);
   });
@@ -159,8 +173,10 @@ let createCartElement = function (bookInCart, index) {
   rowDiv.appendChild(imageColDiv);
   rowDiv.appendChild(infoColDiv);
   rowDiv.appendChild(deleteColDiv);
+  a.appendChild(rowDiv);
+  li.appendChild(a);
 
-  return rowDiv;
+  return li;
 };
 
 let clearElement = function (element) {
