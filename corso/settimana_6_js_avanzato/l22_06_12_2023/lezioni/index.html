@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+
+<body>
+    <h1>Fetch</h1>
+
+    <div id="pictures">
+
+
+    </div>
+
+
+
+    <script>
+        // inviamo una richiesta HTTP di tipo GET (get è implicito e default)
+        fetch("https://randomuser.me/api/?results=5")
+            // ricevo il valore in uscita della fetch nel primo then tramite parametro della callback
+            .then(responseObj => {
+                // ho ricevuto un response object da cui posso leggere lo status o proprietà ok della risposta e decidere se procedere
+                if (responseObj.ok) {
+                    // stiamo ritornando l'operazione response.json() che è una Promise a sua volta e ha bisogno di tempo per risolversi
+                    return responseObj.json()
+                }
+            })
+            // con questo then riusciremo ad aspettare il tempo necessario alla risoluzione del metodo .json() che fa il parse del body della response
+            .then(usersObj => {
+                // dentro il parametro di questa callback abbiamo sempre il dato fornito dalle API pronto per essere utilizzato
+
+                // a questo livello siamo sicuri di avere il dato, al momento giusto in cui è arrivato ed è disponibile
+                // dovremo quindi operare NECESSARIAMENTE all'interno di questo contesto
+
+
+                // possiamo quindi andare a utilizzare i dati contenuti nella risposta come meglio vogliamo
+                // es. DOM Manipulation:
+
+                const container = document.getElementById("pictures")
+                console.log(usersObj)
+                usersObj.results.forEach(user => {
+                    const card = document.createElement("div")
+                    card.style = "display: inline-block; width: 'max-content'; padding: 0.5rem; border: 1px solid lightgray; margin-right: 0.5rem;"
+                    const h3 = document.createElement("h3")
+                    h3.innerText = user.name.title + " " + user.name.first + " " + user.name.last
+                    const img = document.createElement("img")
+                    img.src = user.picture.large
+                    img.style = "border-radius: 50%"
+                    card.appendChild(img)
+                    card.appendChild(h3)
+                    container.appendChild(card)
+                })
+
+            })
+            //il catch gestisce l'errore secondo le istruzioni che definiamo noi a prescindere
+            .catch(error => console.log(error))
+    </script>
+
+
+    <!-- <script src="callbacks.js"></script> -->
+    <!-- <script src="promises.js"></script> -->
+
+</body>
+
+</html>
