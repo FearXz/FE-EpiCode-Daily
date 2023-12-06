@@ -5,25 +5,15 @@ window.onload = function () {
         return serverResponseJson.json();
       }
     })
-    .then((serverResponseConvertedInUsableData) => {
-      let cartArray = [];
-      console.log(serverResponseConvertedInUsableData);
-      refreshLibrary(serverResponseConvertedInUsableData, cartArray);
-    });
-};
-let refreshLibrary = function (arrayOfBook, cartArray) {
-  showBookInLibrary(arrayOfBook);
-  addEventDeleteBtn(arrayOfBook);
-  addEventCartBtn(arrayOfBook, cartArray);
-};
-/*  let refreshCart = function (arrayOfBook, cartArray) {
-  addEventCartBtn(arrayOfBook, cartArray);
-};  */
-let showBookInLibrary = (arrayOfBook) => {
-  let bookContainer = document.getElementById("bookContainer");
+    .then((arrayOfBook) => {
+      console.log(arrayOfBook);
 
-  arrayOfBook.forEach((bookObj) => {
-    bookContainer.innerHTML += `
+      let cartArray = [];
+      let showBookInLibrary = () => {
+        let bookContainer = document.getElementById("bookContainer");
+        bookContainer.innerHTML = "";
+        arrayOfBook.forEach((bookObj) => {
+          bookContainer.innerHTML += `
     <div class="col-3 cardContainer">
     <div class="card">
       <img src="${bookObj.img}" class="card-img-top" alt="${bookObj.title}" />
@@ -40,44 +30,53 @@ let showBookInLibrary = (arrayOfBook) => {
     </div>
     </div>
     `;
-  });
-};
-let showBookInCart = () => {
-  let cartContainer = document.getElementById("cart");
-  let arrayCart = JSON.parse(localStorage.getItem("LibraryCart"));
-  cartContainer.innerHTML = "";
-  let total = 0;
-  arrayCart.forEach((book) => {
-    total += book.price;
-    cartContainer.innerHTML += `
+        });
+      };
+      let showBookInCart = () => {
+        let cartContainer = document.getElementById("cart");
+        let arrayCart = JSON.parse(localStorage.getItem("LibraryCart"));
+        cartContainer.innerHTML = "";
+        let total = 0;
+        arrayCart.forEach((book) => {
+          total += book.price;
+          cartContainer.innerHTML += `
       <div class="col-12">
        title: ${book.title} price: ${parseFloat(book.price.toFixed(2))}
       </div>
         `;
-  });
-  cartContainer.innerHTML += `total = ${parseFloat(total.toFixed(2))}`;
-};
+        });
+        cartContainer.innerHTML += `total = ${parseFloat(total.toFixed(2))}`;
+      };
 
-let addEventDeleteBtn = function (arrayOfBook) {
-  let deleteButtonNode = document.querySelectorAll(".deleteBtn");
-  deleteButtonNode.forEach((button, index) => {
-    button.addEventListener("click", (event) => {
-      event.currentTarget.closest(".cardContainer").remove();
-      console.log(arrayOfBook.splice(index, 1));
-      console.log(arrayOfBook);
-      refreshLibrary(arrayOfBook);
-    });
-  });
-};
+      let addEventDeleteBtn = function () {
+        let deleteButtonNode = document.querySelectorAll(".deleteBtn");
+        deleteButtonNode.forEach((button, index) => {
+          button.addEventListener("click", (event) => {
+            event.currentTarget.closest(".cardContainer").remove();
+            console.log(arrayOfBook.splice(index, 1));
+            console.log(arrayOfBook);
+            refreshLibrary(arrayOfBook);
+          });
+        });
+      };
 
-let addEventCartBtn = function (arrayOfBook, cartArray) {
-  let addToCartButtonNode = document.querySelectorAll(".addToCartBtn");
-  addToCartButtonNode.forEach((button, index) => {
-    button.addEventListener("click", (event) => {
-      cartArray.push(arrayOfBook[index]);
-      console.log(cartArray);
-      localStorage.setItem("LibraryCart", JSON.stringify(cartArray));
-      showBookInCart();
+      let addEventCartBtn = function () {
+        let addToCartButtonNode = document.querySelectorAll(".addToCartBtn");
+        addToCartButtonNode.forEach((button, index) => {
+          button.addEventListener("click", () => {
+            cartArray.push(arrayOfBook[index]);
+            console.log(cartArray);
+            localStorage.setItem("LibraryCart", JSON.stringify(cartArray));
+            showBookInCart();
+          });
+        });
+      };
+      let refreshLibrary = function () {
+        showBookInLibrary();
+        addEventDeleteBtn();
+        addEventCartBtn();
+      };
+
+      refreshLibrary();
     });
-  });
 };
